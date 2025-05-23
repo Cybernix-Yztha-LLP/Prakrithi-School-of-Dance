@@ -1,0 +1,66 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../components/button";
+import { Card, CardContent } from "../components/card";
+import { Input } from "../components/input";
+
+export const LoginScreen = (): JSX.Element => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add login logic here
+  };
+
+  return (
+    <div className="min-h-screen bg-[#fcfcfc] flex items-center justify-center p-4">
+      <Card className="w-full max-w-md">
+        <CardContent className="p-6">
+          <h1 className="text-3xl font-bold text-center mb-6 font-['Labrada',Helvetica] text-[#544c4c]">
+            Welcome Back
+          </h1>
+          <form onSubmit={handleLogin} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Email
+              </label>
+              <Input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Password
+              </label>
+              <Input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full"
+                required
+              />
+            </div>
+            <Button type="submit" className="w-full bg-[#2c282a] text-white">
+              Login
+            </Button>
+          </form>
+          <p className="text-center mt-4 text-sm text-gray-600">
+            Don't have an account?{" "}
+            <button
+              onClick={() => navigate("/signup")}
+              className="text-[#2c282a] font-semibold hover:underline"
+            >
+              Sign up
+            </button>
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
