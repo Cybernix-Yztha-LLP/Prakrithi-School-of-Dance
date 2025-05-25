@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import { Badge } from "../components/badge";
 import { Button } from "../components/button";
@@ -45,23 +46,23 @@ export const Home = (): JSX.Element => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-[#fcfcfc] flex flex-col items-center w-full min-h-screen"> {/* Added min-h-screen to ensure footer can be at bottom */}
+    <div className="bg-[#fcfcfc] flex flex-col items-center w-full min-h-screen">
       {/* Navigation */}
       <Navbar /> {/* Use the Navbar component */}
 
       {/* Hero Section */}
-      <div className="w-full"> {/* Removed pt-[120px] md:pt-[140px] */}
+      <div className="w-full">
         <HeroSection />
       </div>
 
       {/* Main Content Area */}
-      <div className="container mx-auto px-4 md:px-8 w-full max-w-[1728px]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-[1728px]">
         {/* Classes section */}
-        <section id="classes" className="py-16">
-          <h2 className="font-labrada font-medium text-[#544c4c] text-4xl md:text-[64px] text-center mb-8">
+        <section id="classes" className="py-12 md:py-16">
+          <h2 className="font-labrada font-medium text-[#544c4c] text-3xl sm:text-4xl md:text-[54px] lg:text-[64px] text-center mb-6 md:mb-8">
             Classes
           </h2>
-          <p className="font-labrada font-medium text-[#695e5e] text-lg md:text-xl text-center max-w-[977px] mx-auto mb-12">
+          <p className="font-labrada font-medium text-[#695e5e] text-base sm:text-lg md:text-xl text-center max-w-prose lg:max-w-[977px] mx-auto mb-10 md:mb-12">
             Experience our latest class additions featuring mesmerizing dance
             compositions and standalone performances that beautifully represent
             the richness of Indian art and culture. Join us now and immerse
@@ -69,12 +70,12 @@ export const Home = (): JSX.Element => {
           </p>
 
           {/* Updated Card Layout */}
-          <div className="flex flex-col lg:flex-row gap-6 mb-16">
+          <div className="flex flex-col lg:flex-row gap-6 mb-12 md:mb-16">
             {/* Large Card (First Item) */}
             {danceClasses.length > 0 && (
               <Card
                 key={danceClasses[0].id}
-                className="relative overflow-hidden border-none rounded-xl lg:w-1/2 h-[400px] md:h-[500px] lg:h-[591px]"
+                className="relative overflow-hidden border-none rounded-xl lg:w-1/2 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[591px] flex flex-col justify-end"
                 style={{
                   backgroundImage: `url(${danceClasses[0].image})`,
                   backgroundSize: "cover",
@@ -82,15 +83,15 @@ export const Home = (): JSX.Element => {
                 }}
               >
                 <CardContent
-                  className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex justify-between items-end"
+                  className="p-4 md:p-6 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex flex-col sm:flex-row justify-between items-start sm:items-end w-full"
                 >
                   <div>
-                    <Badge className="bg-black/40 backdrop-blur-sm rounded-lg font-labrada font-semibold text-white text-sm md:text-base px-3 py-1.5">
+                    <Badge className="bg-black/40 backdrop-blur-sm rounded-lg font-labrada font-semibold text-white text-xs sm:text-sm md:text-base px-2 py-1 sm:px-3 sm:py-1.5">
                       {danceClasses[0].title}
                     </Badge>
                   </div>
                   {danceClasses[0].description && (
-                    <p className="text-white text-xs md:text-sm font-labrada font-medium max-w-[60%] md:max-w-[50%] ml-4 text-right">
+                    <p className="text-white text-xs sm:text-sm font-labrada font-medium max-w-full sm:max-w-[60%] md:max-w-[50%] mt-2 sm:mt-0 sm:ml-4 text-left sm:text-right">
                       {danceClasses[0].description}
                     </p>
                   )}
@@ -104,7 +105,7 @@ export const Home = (): JSX.Element => {
                 {danceClasses.slice(1).map((danceClass) => (
                   <Card
                     key={danceClass.id}
-                    className="relative overflow-hidden border-none rounded-xl h-[280px] sm:h-[240px] md:h-[285px]" // Adjusted height for 2x2 grid
+                    className="relative overflow-hidden border-none rounded-xl min-h-[200px] sm:min-h-[240px] md:min-h-[285px] flex flex-col justify-end"
                     style={{
                       backgroundImage: `url(${danceClass.image})`,
                       backgroundSize: "cover",
@@ -112,9 +113,9 @@ export const Home = (): JSX.Element => {
                     }}
                   >
                     <CardContent
-                      className="absolute bottom-0 left-0 right-0 p-3 md:p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent"
+                      className="p-3 md:p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent w-full"
                     >
-                      <Badge className="bg-black/40 backdrop-blur-sm rounded-lg font-labrada font-semibold text-white text-xs md:text-sm px-2.5 py-1">
+                      <Badge className="bg-black/40 backdrop-blur-sm rounded-lg font-labrada font-semibold text-white text-xs sm:text-sm md:text-base px-2 py-1 sm:px-2.5 sm:py-1">
                         {danceClass.title}
                       </Badge>
                     </CardContent>

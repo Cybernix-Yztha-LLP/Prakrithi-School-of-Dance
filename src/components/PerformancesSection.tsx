@@ -31,16 +31,14 @@ const previousProgrammesData = {
 const PerformancesSection = () => {
   return (
     <>
-      {/* Previous Programmes Section */}
-      <section id="previous-programmes" className="py-16 bg-pink-50/30"> {/* Light pinkish background */}
-        <div className="container mx-auto px-4">
-          <h2 className="font-labrada font-medium text-[#544c4c] text-3xl md:text-[40px] text-center mb-12">
+      <section id="previous-programmes" className="py-12 md:py-16 bg-pink-50/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-labrada font-medium text-[#544c4c] text-2xl sm:text-3xl md:text-[40px] text-center mb-10 md:mb-12">
             Previous Programes
           </h2>
 
-          {/* Stacked Image and Workshop Button */}
-          <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-8 md:gap-16 mb-16 px-4 md:px-0">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-8 md:gap-12 lg:gap-16 mb-12 md:mb-16 px-0 sm:px-4 md:px-0">
+            <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80">
               {/* Simulate stacked images - you might need a more complex component or multiple image tags for actual stacking effect */}
               <img 
                 src={previousProgrammesData.stackedImage} 
@@ -58,40 +56,38 @@ const PerformancesSection = () => {
                 className="relative w-full h-full object-cover rounded-xl shadow-2xl" // Top image
               />
             </div>
-            <div className="flex-grow flex items-center justify-center md:justify-start mt-8 md:mt-0">
+            <div className="flex-grow flex items-center justify-center md:justify-start mt-6 md:mt-0">
               <Button
                 variant="outline"
-                className="bg-white hover:bg-gray-100 text-gray-800 font-labrada font-semibold py-3 px-8 rounded-lg shadow-md border border-gray-300 flex items-center gap-2"
+                className="bg-white hover:bg-gray-100 text-gray-800 font-labrada font-semibold py-2.5 px-6 sm:py-3 sm:px-8 rounded-lg shadow-md border border-gray-300 flex items-center gap-2 text-sm sm:text-base"
               >
                 {previousProgrammesData.workshopButtonText}
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </div>
           </div>
 
-          {/* Row of Three Smaller Images */}
-          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-16">
+          <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg mb-12 md:mb-16">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
               {previousProgrammesData.smallImages.map((image) => (
                 <div key={image.id} className="aspect-video overflow-hidden rounded-lg">
-                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                 </div>
               ))}
             </div>
           </div>
           
-          {/* Event Cards Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {previousProgrammesData.eventCards.map((event) => (
-              <Card key={event.id} className="relative overflow-hidden rounded-2xl shadow-xl group">
-                <img src={event.image} alt={event.eventName} className="w-full h-64 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end">
-                  <h3 className="font-labrada text-2xl font-bold text-white mb-2">{event.eventName}</h3>
-                  <p className="font-labrada text-sm text-gray-200 mb-4 line-clamp-3">{event.description}</p>
+              <Card key={event.id} className="relative overflow-hidden rounded-2xl shadow-xl group min-h-[350px] sm:min-h-[400px]">
+                <img src={event.image} alt={event.eventName} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:p-6 flex flex-col justify-end">
+                  <h3 className="font-labrada text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2">{event.eventName}</h3>
+                  <p className="font-labrada text-xs sm:text-sm text-gray-200 mb-3 sm:mb-4 line-clamp-3">{event.description}</p>
                   <Button
                     variant="outline"
                     size="sm"
-                    className="bg-white/20 hover:bg-white/30 text-white border-white/50 backdrop-blur-sm font-labrada self-start px-4 py-1 rounded-md text-xs"
+                    className="bg-white/20 hover:bg-white/30 text-white border-white/50 backdrop-blur-sm font-labrada self-start px-3 py-1 sm:px-4 rounded-md text-xs"
                   >
                     more
                   </Button>

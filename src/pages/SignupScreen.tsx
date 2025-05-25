@@ -19,7 +19,7 @@ export const SignupScreen = (): JSX.Element => {
     <div className="min-h-screen bg-[#fcfcfc] flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardContent className="p-6">
-          <h1 className="text-3xl font-bold text-center mb-6 font-['Labrada',Helvetica] text-[#544c4c]">
+          <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 font-['Labrada',Helvetica] text-[#544c4c]">
             Create Account
           </h1>
           <form onSubmit={handleSignup} className="space-y-4">
@@ -67,7 +67,7 @@ export const SignupScreen = (): JSX.Element => {
             Already have an account?{" "}
             <button
               onClick={() => navigate("/login")}
-              className="text-[#2c282a] font-semibold hover:underline"
+              className="text-[#2c282a] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2c282a]"
             >
               Login
             </button>
