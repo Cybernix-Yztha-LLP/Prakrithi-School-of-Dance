@@ -56,7 +56,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                <FaFacebookF size={18} sm:size={20} />
+                <FaFacebookF className="w-5 h-5" />
               </a>
               <a
                 href="#"
@@ -64,7 +64,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                <FaInstagram size={18} sm:size={20} />
+                <FaInstagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
@@ -72,7 +72,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                <FaYoutube size={18} sm:size={20} />
+                <FaYoutube className="w-5 h-5" />
               </a>
             </div>
           </div>
