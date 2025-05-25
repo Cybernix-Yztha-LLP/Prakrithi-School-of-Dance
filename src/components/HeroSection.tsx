@@ -42,19 +42,19 @@ const HeroSection = () => {
       <div className="absolute z-10 bottom-4 sm:bottom-8 left-4 right-4 sm:left-8 sm:right-8 flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-3 sm:gap-4">
         <Button
           variant="outline"
-          className="bg-white/80 hover:bg-white text-black font-labrada font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out group text-sm sm:text-base w-full sm:w-auto"
+          className="bg-white/90 hover:bg-white text-gray-800 hover:text-black font-labrada font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out group text-sm sm:text-base w-full sm:w-auto border-white/50"
           onClick={() => navigate("/contact")} // Link to contact page
         >
           Book a workshop
-          <ArrowRight className="ml-1.5 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <ArrowRight className="ml-1.5 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 text-gray-700 group-hover:text-black group-hover:translate-x-1 transition-all duration-300" />
         </Button>
         <Button
           variant="outline"
-          className="bg-white/80 hover:bg-white text-black font-labrada font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out group text-sm sm:text-base w-full sm:w-auto"
+          className="bg-white/90 hover:bg-white text-gray-800 hover:text-black font-labrada font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out group text-sm sm:text-base w-full sm:w-auto border-white/50"
           onClick={() => navigate("/signup")} // Link to signup page
         >
           Sign up
-          <ArrowRight className="ml-1.5 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <ArrowRight className="ml-1.5 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 text-gray-700 group-hover:text-black group-hover:translate-x-1 transition-all duration-300" />
         </Button>
       </div>
     </section>

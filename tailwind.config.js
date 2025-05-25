@@ -67,10 +67,20 @@ export default { // Changed to ES module syntax, common for Vite
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        pulseSlightly: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.03)' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        fadeInUp: 'fadeInUp 1s ease-out 0.3s forwards',
+        pulseSlightly: 'pulseSlightly 2.5s infinite ease-in-out',
       },
     },
     container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },

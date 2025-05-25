@@ -33,7 +33,7 @@ const PerformancesSection = () => {
     <>
       <section id="previous-programmes" className="py-12 md:py-16 bg-pink-50/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-labrada font-medium text-[#544c4c] text-2xl sm:text-3xl md:text-[40px] text-center mb-10 md:mb-12">
+          <h2 className="font-labrada font-medium text-[#544c4c] text-2xl sm:text-3xl md:text-[40px] text-center mb-10 md:mb-12 animate-fadeInUp">
             Previous Programes
           </h2>
 

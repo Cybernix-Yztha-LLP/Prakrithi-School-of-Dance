@@ -16,11 +16,11 @@ const AboutTrainerSection = () => {
   return (
     <section className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-[#333] mb-10 md:mb-12">
+        <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-[#333] mb-10 md:mb-12 animate-fadeInUp">
           {trainerInfo.name}
         </h2>
         <div className="flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-12 items-center md:items-start">
-          <div className="w-full md:w-1/3 flex flex-col items-center text-center md:text-left">
+          <div className="w-full md:w-1/3 flex flex-col items-center text-center md:text-left animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
             <img
               src={trainerInfo.image}
               alt={trainerInfo.name}
@@ -36,7 +36,7 @@ const AboutTrainerSection = () => {
             </ul>
           </div>
 
-          <div className="w-full md:w-2/3">
+          <div className="w-full md:w-2/3 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             {trainerInfo.bio.map((paragraph, index) => (
               <p key={index} className="font-labrada text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 leading-relaxed text-justify md:text-left">
                 {paragraph}

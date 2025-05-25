@@ -45,10 +45,10 @@ export const ClassesSection = (): JSX.Element => {
 	return (
 		<section className="w-full bg-[#F8F5F2] py-12 md:py-16 px-4 sm:px-6 lg:px-8">
 			<div className="max-w-6xl mx-auto">
-				<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#544c4c] text-center mb-6 font-['Labrada',Helvetica]">
+				<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#544c4c] text-center mb-6 font-['Labrada',Helvetica] animate-fadeInUp">
 					classes
 				</h2>
-				<p className="text-base sm:text-lg text-[#695e5e] font-medium text-center max-w-prose lg:max-w-3xl mx-auto mb-10 md:mb-12 font-['Labrada',Helvetica]">
+				<p className="text-base sm:text-lg text-[#695e5e] font-medium text-center max-w-prose lg:max-w-3xl mx-auto mb-10 md:mb-12 font-['Labrada',Helvetica] animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
 					Experience our latest class additions featuring mesmerizing dance
 					compositions and standalone performances that beautifully represent
 					the richness of Indian art and culture. Join us now and immerse

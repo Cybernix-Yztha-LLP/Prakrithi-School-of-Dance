@@ -21,16 +21,16 @@ const About = () => (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       
       <header className="text-center mb-12 md:mb-16">
-        <h1 className="font-labrada text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-rose-700 tracking-tight">
+        <h1 className="font-labrada text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-rose-700 tracking-tight animate-fadeInUp">
           About Prakrithi School of Dance
         </h1>
-        <p className="mt-3 sm:mt-4 font-labrada text-lg sm:text-xl text-gray-600 max-w-prose lg:max-w-3xl mx-auto">
+        <p className="mt-3 sm:mt-4 font-labrada text-lg sm:text-xl text-gray-600 max-w-prose lg:max-w-3xl mx-auto animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
           Nurturing talent and preserving the rich heritage of Indian classical dance.
         </p>
       </header>
 
       {/* Our Philosophy Section */}
-      <section id="philosophy" className="mb-12 md:mb-20 p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
+      <section id="philosophy" className="mb-12 md:mb-20 p-6 sm:p-8 bg-white rounded-xl shadow-2xl animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
         <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-4 sm:mb-6 text-center">
           Our Philosophy
         </h2>
@@ -45,7 +45,7 @@ const About = () => (
       </section>
 
       {/* Meet Our Founder Section */}
-      <section id="founder" className="mb-12 md:mb-20 p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
+      <section id="founder" className="mb-12 md:mb-20 p-6 sm:p-8 bg-white rounded-xl shadow-2xl animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
         <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-8 sm:mb-10 text-center">
           Meet Our Founder
         </h2>
@@ -78,7 +78,7 @@ const About = () => (
       </section>
 
       {/* Our Journey / Previous Events Section */}
-      <section id="journey" className="p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
+      <section id="journey" className="p-6 sm:p-8 bg-white rounded-xl shadow-2xl animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
         <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-4 sm:mb-6 text-center">
           Our Journey
         </h2>

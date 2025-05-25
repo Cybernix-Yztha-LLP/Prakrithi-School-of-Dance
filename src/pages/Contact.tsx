@@ -17,12 +17,12 @@ const Contact = () => {
   return (
     <div className="bg-[#fcfcfc] pt-[80px] sm:pt-[100px] md:pt-[120px]"> {/* Adjusted top padding */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <h1 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 mb-10 md:mb-12 text-center">
+        <h1 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 mb-10 md:mb-12 text-center animate-fadeInUp">
           Contact Us
         </h1>
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-start">
           {/* Left Column: Images */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-4">
+          <div className="w-full lg:w-1/2 flex flex-col gap-4 animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
             <div className="w-full overflow-hidden rounded-xl shadow-lg">
               <img src={mainImage} alt="Contact Main" className="w-full h-auto object-cover aspect-[4/3] sm:aspect-video" />
             </div>
@@ -37,7 +37,7 @@ const Contact = () => {
           </div>
 
           {/* Right Column: Form */}
-          <div className="w-full lg:w-1/2 bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-xl">
+          <div className="w-full lg:w-1/2 bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-xl animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             <form>
               {formFields.map((field) => (
                 <div className="mb-5 sm:mb-6" key={field.name}>
