@@ -3,6 +3,7 @@ import { Button } from './button'; // Assuming button component exists
 import { Card, CardContent } from './card'; // Assuming card components exist
 import { ArrowRight } from 'lucide-react'; // Assuming lucide-react for icons
 import { AnimatedSection } from './AnimatedSection';
+import { useNavigate } from 'react-router-dom';
 
 // Placeholder data for previous programmes
 const previousProgrammesData = {
@@ -30,6 +31,8 @@ const previousProgrammesData = {
 };
 
 const PerformancesSection = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <section id="previous-programmes" className="py-12 md:py-16 bg-pink-50/30">
@@ -83,6 +86,7 @@ const PerformancesSection = () => {
                 <Button
                   variant="outline"
                   className="bg-white hover:bg-gray-100 text-gray-800 font-labrada font-semibold py-2.5 px-6 sm:py-3 sm:px-8 rounded-lg shadow-md border border-gray-300 flex items-center gap-2 text-sm sm:text-base hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  onClick={() => navigate("/contact")}
                 >
                   {previousProgrammesData.workshopButtonText}
                   <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-300" />
