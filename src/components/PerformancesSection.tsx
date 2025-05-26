@@ -17,9 +17,9 @@ const previousProgrammesData = {
   eventCards: [
     {
       id: 1,
-      eventName: "Event Name One",
+      eventName: "Pooja Fest",
       image: "/prevperformance1.svg", // Replace
-      description: "Experience our latest class additions featuring mesmerizing dance compositions and standalone performances that beautifully represent the richness of Indian art and culture. Join us now and immerse yourself in the magic.",
+      description: "",
     },
     {
       id: 2,
