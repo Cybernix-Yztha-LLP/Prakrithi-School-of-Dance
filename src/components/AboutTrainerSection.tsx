@@ -34,9 +34,9 @@ const AboutTrainerSection = () => {
               {trainerInfo.achievementsTitle}
             </h3>
             <ul className="list-disc list-inside text-gray-600 font-labrada text-sm sm:text-base text-center md:text-left">
-              <li className="hover:text-gray-800 transition-colors duration-200">Achievement 1 placeholder...</li>
-              <li className="hover:text-gray-800 transition-colors duration-200">Achievement 2 placeholder...</li>
-              <li className="hover:text-gray-800 transition-colors duration-200">Achievement 3 placeholder...</li>
+              <li className="hover:text-gray-800 transition-colors duration-200">AHSSLC rank holder</li>
+              <li className="hover:text-gray-800 transition-colors duration-200">Phd From Kerala Univeristy</li>
+              <li className="hover:text-gray-800 transition-colors duration-200">MA First Rank</li>
             </ul>
           </AnimatedSection>
 

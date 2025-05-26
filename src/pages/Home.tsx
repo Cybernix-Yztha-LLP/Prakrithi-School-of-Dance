@@ -33,7 +33,7 @@ const danceClasses = [
   },
   {
     id: 4,
-    title: "Keralanadanam",
+    title: "Koodiyattam",
     image: "/dance2.png",
   },
   {
