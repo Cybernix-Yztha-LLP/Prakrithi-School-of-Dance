@@ -39,7 +39,7 @@ const Navbar = () => {
             className="font-labrada font-medium text-[#636161] text-xl sm:text-2xl md:text-3xl lg:text-[40px] text-center md:text-left no-underline"
             onClick={handleHomeClick}
           >
-            Appu Hacker god player 52401
+            Appu Hacker go000
           </Link>
 
           {/* Hamburger Menu Button - visible on small screens */}
