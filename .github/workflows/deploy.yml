@@ -1,0 +1,46 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build React app
+      run: npm run build
+
+    - name: Deploy to VPS
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        VPS_IP: 107.174.0.162
+        VPS_USER: deployer
+        VPS_DEST: /home/deployer/prakrithi
+      run: |
+        echo "$SSH_PRIVATE_KEY" > private_key
+        chmod 600 private_key
+        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << 'EOF'
+          mkdir -p $VPS_DEST
+          sudo systemctl stop nginx
+        EOF
+        scp -o StrictHostKeyChecking=no -i private_key -r ./dist/* $VPS_USER@$VPS_IP:$VPS_DEST/dist/
+        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << 'EOF'
+          sudo chown -R nginx:nginx $VPS_DEST/dist
+          sudo chmod -R 755 $VPS_DEST/dist
+          sudo systemctl start nginx
+        EOF
+        rm private_key
