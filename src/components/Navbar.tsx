@@ -39,7 +39,7 @@ const Navbar = () => {
             className="font-labrada font-medium text-[#636161] text-xl sm:text-2xl md:text-3xl lg:text-[40px] text-center md:text-left no-underline"
             onClick={handleHomeClick}
           >
-            kuruvi pro max ultimate king god version 
+            kuruvi pro max ultimate king god version test7
           </Link>
 
           {/* Hamburger Menu Button - visible on small screens */}
