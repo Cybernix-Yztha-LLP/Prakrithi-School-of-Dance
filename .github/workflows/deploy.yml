@@ -40,6 +40,7 @@ jobs:
           mkdir -p /home/deployer/prakrithi/dist
           sudo -n /bin/chown $VPS_USER:$VPS_USER /home/deployer/prakrithi/dist
           sudo -n /bin/chmod 755 /home/deployer/prakrithi/dist
+          rm -rf /home/deployer/prakrithi/dist/*
           ls -ld /home/deployer/prakrithi /home/deployer/prakrithi/dist
           sudo -n /bin/systemctl stop nginx
         EOF
