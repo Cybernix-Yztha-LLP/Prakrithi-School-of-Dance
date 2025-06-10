@@ -51,7 +51,7 @@ jobs:
                 ls -ld /home/deployer/prakrithi/dist/*
                 sudo -n /bin/chown -R nginx:nginx /home/deployer/prakrithi/dist
                 sudo -n /bin/chmod -R 755 /home/deployer/prakrithi/dist
-                sudo -n /bin/chmod -R 644 /home/deployer/prakrithi/dist/*
+                sudo -n find /home/deployer/prakrithi/dist -type f -exec chmod 644 {} \;
                 sudo -n /bin/systemctl start nginx
             EOF
             rm private_key
