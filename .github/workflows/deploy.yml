@@ -33,12 +33,12 @@ jobs:
       run: |
         echo "$SSH_PRIVATE_KEY" > private_key
         chmod 600 private_key
-        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << 'EOF'
+        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << 'EOF"
           mkdir -p $VPS_DEST
           sudo systemctl stop nginx
         EOF
         scp -o StrictHostKeyChecking=no -i private_key -r ./dist/* $VPS_USER@$VPS_IP:$VPS_DEST/dist/
-        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << 'EOF'
+        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << 'EOF"
           sudo chown -R nginx:nginx $VPS_DEST/dist
           sudo chmod -R 755 $VPS_DEST/dist
           sudo systemctl start nginx
