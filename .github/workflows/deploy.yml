@@ -33,18 +33,21 @@ jobs:
       run: |
         echo "$SSH_PRIVATE_KEY" | tr -d '\r' > private_key
         chmod 600 private_key
-        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << 'EOF'
-          mkdir -p $VPS_DEST
-          chmod 755 $VPS_DEST
-          mkdir -p $VPS_DEST/dist
-          chown $VPS_USER:$VPS_USER $VPS_DEST/dist
-          chmod 755 $VPS_DEST/dist
+        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << EOF
+          echo "VPS_DEST is: $VPS_DEST"
+          mkdir -p /home/deployer/prakrithi
+          chmod 755 /home/deployer/prakrithi
+          mkdir -p /home/deployer/prakrithi/dist
+          chown $VPS_USER:$VPS_USER /home/deployer/prakrithi/dist
+          chmod 755 /home/deployer/prakrithi/dist
+          ls -ld /home/deployer/prakrithi /home/deployer/prakrithi/dist
           sudo -n /bin/systemctl stop nginx
         EOF
-        scp -o StrictHostKeyChecking=no -i private_key -r ./dist/* $VPS_USER@$VPS_IP:$VPS_DEST/dist/
-        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << 'EOF'
-          sudo -n /bin/chown -R nginx:nginx $VPS_DEST/dist
-          sudo -n /bin/chmod -R 755 $VPS_DEST/dist
+        scp -o StrictHostKeyChecking=no -i private_key -r ./dist/* $VPS_USER@$VPS_IP:/home/deployer/prakrithi/dist/
+        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << EOF
+          ls -ld /home/deployer/prakrithi/dist
+          sudo -n /bin/chown -R nginx:nginx /home/deployer/prakrithi/dist
+          sudo -n /bin/chmod -R 755 /home/deployer/prakrithi/dist
           sudo -n /bin/systemctl start nginx
         EOF
         rm private_key
