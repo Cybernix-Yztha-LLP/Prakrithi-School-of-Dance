@@ -36,10 +36,10 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << EOF
           echo "VPS_DEST is: $VPS_DEST"
           mkdir -p /home/deployer/prakrithi
-          chmod 755 /home/deployer/prakrithi
+          sudo -n /bin/chmod 755 /home/deployer/prakrithi
           mkdir -p /home/deployer/prakrithi/dist
-          chown $VPS_USER:$VPS_USER /home/deployer/prakrithi/dist
-          chmod 755 /home/deployer/prakrithi/dist
+          sudo -n /bin/chown $VPS_USER:$VPS_USER /home/deployer/prakrithi/dist
+          sudo -n /bin/chmod 755 /home/deployer/prakrithi/dist
           ls -ld /home/deployer/prakrithi /home/deployer/prakrithi/dist
           sudo -n /bin/systemctl stop nginx
         EOF
