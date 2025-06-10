@@ -39,7 +39,7 @@ const Navbar = () => {
             className="font-labrada font-medium text-[#636161] text-xl sm:text-2xl md:text-3xl lg:text-[40px] text-center md:text-left no-underline"
             onClick={handleHomeClick}
           >
-            kuruvi pro max ultimate king god version test7
+            Prakrithi school of Dance
           </Link>
 
           {/* Hamburger Menu Button - visible on small screens */}
@@ -100,7 +100,7 @@ const Navbar = () => {
                 {item.title}
               </Link>
             ))}
-            <Button
+             {/* <Button
               onClick={() => {
                 navigate("/login");
                 handleNavLinkClick();
@@ -108,7 +108,7 @@ const Navbar = () => {
               className="font-labrada font-medium bg-[#2c282a] text-white text-sm sm:text-base md:text-lg lg:text-xl px-4 py-1.5 sm:px-5 sm:py-2 md:px-6 rounded-full hover:bg-[#1a1818] transition-colors"
             >
               Login
-            </Button>
+            </Button>  */}
           </div>
         </div>
 
@@ -129,7 +129,7 @@ const Navbar = () => {
                   {item.title}
                 </Link>
               ))}
-              <Button
+              {/* <Button
                 onClick={() => {
                   navigate("/login");
                   handleNavLinkClick();
@@ -137,7 +137,7 @@ const Navbar = () => {
                 className="w-full font-labrada font-medium bg-[#2c282a] text-white text-lg px-6 py-2 rounded-full hover:bg-[#1a1818] transition-colors mt-2"
               >
                 Login
-              </Button>
+              </Button> */}
             </div>
           </div>
         )}
