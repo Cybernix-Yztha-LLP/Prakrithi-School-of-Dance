@@ -10,47 +10,47 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+            node-version: '18'
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build React app
-      run: npm run build
+      - name: Build React app
+        run: npm run build
 
-    - name: Deploy to VPS
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        VPS_IP: 107.174.0.162
-        VPS_USER: deployer
-        VPS_DEST: /home/deployer/prakrithi
-      run: |
-        echo "$SSH_PRIVATE_KEY" | tr -d '\r' > private_key
-        chmod 600 private_key
-        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << EOF
-          echo "VPS_DEST is: $VPS_DEST"
-          mkdir -p /home/deployer/prakrithi
-          sudo -n /bin/chmod 755 /home/deployer/prakrithi
-          sudo -n /bin/rm -rf /home/deployer/prakrithi/dist
-          mkdir -p /home/deployer/prakrithi/dist
-          sudo -n /bin/chown -R $VPS_USER:$VPS_USER /home/deployer/prakrithi/dist
-          sudo -n /bin/chmod -R 755 /home/deployer/prakrithi/dist
-          ls -ld /home/deployer/prakrithi /home/deployer/prakrithi/dist
-          sudo -ld /home/deployer/prakrithi/dist/*
-          sudo -n /bin/systemctl stop nginx
-        EOF
-        scp -o StrictHostKeyChecking=no -i private_key -r ./dist/* $VPS_USER@$VPS_IP:/home/deployer/prakrithi/dist/
-        ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << EOF
-          ls -ld /home/deployer/prakrithi/dist
-          ls -ld /home/deployer/prakrithi/dist/*
-          sudo -n /bin/chown -R nginx:nginx /home/deployer/prakrithi/dist
-          sudo -ld /bin/chmod -R 755 /home/deployer/prakrithi/dist
-          sudo -n /bin/systemctl start nginx
-        EOF
-        rm private_key
+      - name: Deploy to VPS
+        env:
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            VPS_IP: 107.174.0.162
+            VPS_USER: deployer
+            VPS_DEST: /home/deployer/prakrithi
+        run: |
+             echo "$SSH_PRIVATE_KEY" | tr -d '\r' > private_key
+             chmod 600 private_key
+             ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << EOF
+                 echo "VPS_DEST is: $VPS_DEST"
+                 mkdir -p /home/deployer/prakrithi
+                 sudo -n /bin/chmod 755 /home/deployer/prakrithi
+                 sudo -n /bin/rm -rf /home/deployer/prakrithi/dist
+                 mkdir -p /home/deployer/prakrithi/dist
+                 sudo -n /bin/chown -R $VPS_USER:$VPS_USER /home/deployer/prakrithi/dist
+                 sudo -n /bin/chmod -R 755 /home/deployer/prakrithi/dist
+                 ls -ld /home/deployer/prakrithi /home/deployer/prakrithi/dist
+                 ls -ld /home/deployer/prakrithi/dist/*
+                 sudo -n /bin/systemctl stop nginx
+             EOF
+             scp -o StrictHostKeyChecking=no -i private_key -r ./dist/* $VPS_USER@$VPS_IP:/home/deployer/prakrithi/dist/
+             ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_IP << EOF
+                 ls -ld /home/deployer/prakrithi/dist
+                 ls -ld /home/deployer/prakrithi/dist/*
+                 sudo -n /bin/chown -R nginx:nginx /home/deployer/prakrithi/dist
+                 sudo -n /bin/chmod -R 755 /home/deployer/prakrithi/dist
+                 sudo -n /bin/systemctl start nginx
+             EOF
+             rm private_key
