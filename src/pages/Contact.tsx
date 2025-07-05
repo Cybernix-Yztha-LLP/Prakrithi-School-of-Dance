@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 // Placeholder image paths - replace with your actual images in the /public folder
 const mainImage = "/dance1.png"; // Example: /images/contact/main.jpg
@@ -9,7 +10,19 @@ const formFields = [
   { label: "Name", type: "text", name: "name", placeholder: "Your Full Name" }
 ];
 
+
+
+
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+  const handleSubmit = (e) => {
+  e.preventDefault();
+  const phoneNumber = '+917907517186'; 
+  const text = `Hello, my name is ${name}. ${message}`;
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+  window.open(url, '_blank');
+};
   return (
     <div className="bg-[#fcfcfc] pt-[80px] sm:pt-[100px] md:pt-[120px]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -42,7 +55,7 @@ const Contact = () => {
 
           {/* Right Column: Form */}
           <AnimatedSection animation="flipInY" delay={800} className="w-full lg:w-1/2 bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-xl">
-            <form>
+            <form onSubmit={handleSubmit}>
               {formFields.map((field, index) => (
                 <AnimatedSection key={field.name} animation="slideInRight" delay={1000 + index * 100}>
                   <div className="mb-5 sm:mb-6">
@@ -53,7 +66,7 @@ const Contact = () => {
                       name={field.name}
                       placeholder={field.placeholder}
                       className="w-full px-3 py-2.5 border-b-2 border-gray-300 focus:outline-none focus:border-[#2c282a] font-labrada text-gray-700 transition-colors text-sm sm:text-base"
-                    />
+                    value={name} onChange={(e) => setName(e.target.value)} required/>
                   </div>
                 </AnimatedSection>
               ))}
@@ -66,7 +79,7 @@ const Contact = () => {
                     rows={4}
                     placeholder="Your message..."
                     className="w-full px-3 py-2.5 border-b-2 border-gray-300 focus:outline-none focus:border-[#2c282a] font-labrada text-gray-700 transition-colors text-sm sm:text-base"
-                  ></textarea>
+                  value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
                 </div>
               </AnimatedSection>
               <AnimatedSection animation="heartBeat" delay={1700}>
