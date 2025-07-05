@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 // Placeholder image paths - replace with your actual images in the /public folder
-const mainImage = "/dance1.png"; // Example: /images/contact/main.jpg
+const mainImage = "/perfMohini.jpg"; // Example: /images/contact/main.jpg
 const subImage1 = "/perfImage.png"; // Example: /images/contact/sub1.jpg
 const subImage2 = "/perfImage.png"; // Example: /images/contact/sub2.jpg
 
