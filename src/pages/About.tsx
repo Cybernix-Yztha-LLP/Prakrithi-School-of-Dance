@@ -16,6 +16,24 @@ const founder = {
     "Choreographed [Number] unique dance productions",
   ],
 };
+const directorInfo = {
+  name: "Praveen S.S.",
+  image: "/director.jpeg", // Replace with actual path to trainer image in /public
+  bio:[
+  "Praveen S.S. is the Director of the Prakrithi Group, comprising Prakrithi School of Dance, Prakrithi Dance Collections, and Prakrithi Auditorium. He is a multifaceted professional—an educator, administrator, and cultural promoter—whose leadership continues to drive the Prakrithi institutions toward excellence in classical arts and community service.",
+  
+  "With a solid educational foundation, Praveen holds Diplomas in Civil Engineering and Computer Engineering, a Master’s Degree in Malayalam (M.A.), a Bachelor of Education (B.Ed.), and is a qualified UGC-NET holder. His academic pursuits reflect a rare combination of technical precision and literary depth.",
+  
+  "Praveen began his professional journey as a teacher, bringing his passion for education into classrooms across various reputed institutions. His teaching career includes notable roles at Technical High School, Pongumoodu, Loyola School, SNGK Teacher Education College, and Dr. A.M.M.R. Memorial Residential Higher Secondary School. His experience in both secondary and teacher education sectors adds depth to his leadership style and his approach to holistic development.",
+  
+  "He also served as the Chairman of the Union at Sree Sankaracharya University of Sanskrit during the academic year 2001–2002, showcasing early leadership qualities and a strong commitment to cultural and student affairs.",
+  
+  "Today, as Director of the Prakrithi Group, Praveen S.S. plays a pivotal role in nurturing artistic talent, supporting traditional art forms, and managing the infrastructure and vision behind one of the region’s most respected cultural institutions."
+]
+,
+  achievementsTitle: "Achievements",
+  // Add achievements data if needed, e.g., achievements: ["Award 1", "Recognition 2"]
+};
 
 const About = () => (
   <div className="bg-gradient-to-b from-pink-50 via-rose-50 to-amber-50 min-h-screen py-12 md:py-16 pt-[80px] sm:pt-[100px] md:pt-[120px] lg:pt-32">
@@ -77,6 +95,49 @@ const About = () => (
             </AnimatedSection>
             <div className="font-labrada text-base sm:text-lg text-gray-700 space-y-3 sm:space-y-4 leading-relaxed flex-grow">
               {founder.bio.map((paragraph, index) => (
+                <AnimatedSection key={index} animation="fadeInRight" delay={500 + index * 100}>
+                  <p>{paragraph}</p>
+                </AnimatedSection>
+              ))}
+              {founder.achievements && founder.achievements.length > 0 && (
+                <AnimatedSection animation="fadeInUp" delay={800}>
+                  <div className="mt-4 sm:mt-6">
+                    <h4 className="font-semibold text-lg sm:text-xl text-gray-800 mb-1.5 sm:mb-2">Key Highlights:</h4>
+                    <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm sm:text-base">
+                      {founder.achievements.map((achievement, index) => (
+                        <AnimatedSection key={index} animation="fadeIn" delay={900 + index * 100}>
+                          <li>{achievement}</li>
+                        </AnimatedSection>
+                      ))}
+                    </ul>
+                  </div>
+                </AnimatedSection>
+              )}
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+            {/* Meet Our Founder Section */}
+      <AnimatedSection animation="fadeIn" delay={200}>
+        <section id="founder" className="mb-12 md:mb-20 p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
+          <AnimatedSection animation="fadeInUp" delay={300}>
+            <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-8 sm:mb-10 text-center">
+              Meet Our Director
+            </h2>
+          </AnimatedSection>
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 sm:gap-8 md:gap-10">
+            <AnimatedSection animation="fadeInLeft" delay={400} className="flex-shrink-0 text-center lg:text-left">
+              <img
+                src={directorInfo.image}
+                alt={directorInfo.name}
+                className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full object-cover border-4 sm:border-8 border-rose-200 shadow-lg mx-auto lg:mx-0"
+              />
+              <h3 className="font-labrada text-xl sm:text-2xl font-bold text-gray-800 mt-4 sm:mt-6">{founder.name}</h3>
+              <p className="font-labrada text-rose-500 text-sm sm:text-base">Founder & Principal Instructor</p>
+            </AnimatedSection>
+            <div className="font-labrada text-base sm:text-lg text-gray-700 space-y-3 sm:space-y-4 leading-relaxed flex-grow">
+              {directorInfo.bio.map((paragraph, index) => (
                 <AnimatedSection key={index} animation="fadeInRight" delay={500 + index * 100}>
                   <p>{paragraph}</p>
                 </AnimatedSection>
