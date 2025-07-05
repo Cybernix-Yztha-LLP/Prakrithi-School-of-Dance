@@ -1,17 +1,12 @@
 import React from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
-
 // Placeholder image paths - replace with your actual images in the /public folder
 const mainImage = "/dance1.png"; // Example: /images/contact/main.jpg
 const subImage1 = "/perfImage.png"; // Example: /images/contact/sub1.jpg
 const subImage2 = "/perfImage.png"; // Example: /images/contact/sub2.jpg
 
 const formFields = [
-  { label: "Name", type: "text", name: "name", placeholder: "Your Full Name" },
-  { label: "Email", type: "email", name: "email", placeholder: "your.email@example.com" },
-  { label: "Phone", type: "tel", name: "phone", placeholder: "(123) 456-7890" },
-  { label: "Address", type: "text", name: "address", placeholder: "123 Main St" },
-  { label: "State", type: "text", name: "state", placeholder: "Your State" },
+  { label: "Name", type: "text", name: "name", placeholder: "Your Full Name" }
 ];
 
 const Contact = () => {
@@ -77,9 +72,9 @@ const Contact = () => {
               <AnimatedSection animation="heartBeat" delay={1700}>
                 <button
                   type="submit"
-                  className="font-labrada font-medium bg-[#2c282a] text-white text-base sm:text-lg px-6 py-2.5 sm:px-8 sm:py-3 rounded-lg hover:bg-[#1a1818] transition-colors w-full mt-4"
+                  className="flex items-center justify-center gap-2 font-labrada font-medium bg-[#2c282a] text-white text-base sm:text-lg px-6 py-2.5 sm:px-8 sm:py-3 rounded-lg hover:bg-[#1a1818] transition-colors w-full mt-4"
                 >
-                  Send Message
+                  <img src="/public/whatsapp.svg" alt="WhatsApp" className="w-7 h-7" />Send Message
                 </button>
               </AnimatedSection>
             </form>
