@@ -134,7 +134,7 @@ const About = () => (
                 className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full object-cover border-4 sm:border-8 border-rose-200 shadow-lg mx-auto lg:mx-0"
               />
               <h3 className="font-labrada text-xl sm:text-2xl font-bold text-gray-800 mt-4 sm:mt-6">{founder.name}</h3>
-              <p className="font-labrada text-rose-500 text-sm sm:text-base">Founder & Principal Instructor</p>
+              <p className="font-labrada text-rose-500 text-sm sm:text-base">Director</p>
             </AnimatedSection>
             <div className="font-labrada text-base sm:text-lg text-gray-700 space-y-3 sm:space-y-4 leading-relaxed flex-grow">
               {directorInfo.bio.map((paragraph, index) => (
