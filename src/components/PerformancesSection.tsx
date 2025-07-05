@@ -20,13 +20,7 @@ const previousProgrammesData = {
       eventName: "Pooja Fest",
       image: "/dancedance.jpg", // Replace
       description: "",
-    },
-    {
-      id: 2,
-      eventName: "Event Name Two",
-      image: "/prevperformance2.svg", // Replace
-      description: "Discover the vibrant traditions of Indian dance through captivating performances. Our events showcase a blend of classical artistry and contemporary expression, leaving audiences spellbound.",
-    },
+    }
   ],
 };
 
