@@ -20,6 +20,12 @@ const previousProgrammesData = {
       eventName: "Pooja Fest",
       image: "/dancedance.jpg", // Replace
       description: "",
+    },
+        {
+      id: 2,
+      eventName: "Dance",
+      image: "/perfMohini.jpg", // Replace
+      description: "",
     }
   ],
 };
