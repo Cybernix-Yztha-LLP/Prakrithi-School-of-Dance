@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 // Placeholder data for previous programmes
 const previousProgrammesData = {
-  stackedImage: "/DancestackedImage.png", // Replace with your actual image path
+  stackedImage: "/dancestacked.JPG", // Replace with your actual image path
   workshopButtonText: "Book a workshop",
   smallImages: [
     { id: 1, src: "/dance4.jpg", alt: "Previous programme 1" }, // Replace
@@ -18,7 +18,7 @@ const previousProgrammesData = {
     {
       id: 1,
       eventName: "Pooja Fest",
-      image: "/prevperformance1.svg", // Replace
+      image: "/dancedance.jpg", // Replace
       description: "",
     },
     {
@@ -52,7 +52,7 @@ const PerformancesSection = () => {
                 <img 
                   src={previousProgrammesData.stackedImage} 
                   alt="Previous programme highlight" 
-                  className="w-full h-full object-cover rounded-xl shadow-2xl transform -rotate-6 transition-all duration-700 ease-out group-hover:-rotate-12 group-hover:scale-105 group-hover:shadow-3xl"
+                  className="w-full h-full rounded-xl shadow-2xl transform -rotate-6 transition-all duration-700 ease-out group-hover:-rotate-12 group-hover:scale-105 group-hover:shadow-3xl object-top overflow-hidden"
                 />
               </AnimatedSection>
               
