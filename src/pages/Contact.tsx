@@ -16,7 +16,7 @@ const formFields = [
 const Contact = () => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   const phoneNumber = '+917907517186'; 
   const text = `Hello, my name is ${name}. ${message}`;
