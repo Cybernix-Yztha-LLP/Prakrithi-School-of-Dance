@@ -123,7 +123,85 @@ const About = () => (
         </section>
       </AnimatedSection>
 
+            {/* History & Legacy */}
+      <AnimatedSection animation="fadeIn" delay={200} className="mt-16">
+        <section id="journey" className="p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
+          <AnimatedSection animation="fadeInUp" delay={300}>
+            <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-4 sm:mb-6 text-center">
+              History & Legacy
+            </h2>
+          </AnimatedSection>
+          <div className="font-labrada text-base sm:text-lg text-gray-700 space-y-3 sm:space-y-4 leading-relaxed text-justify">
+            <AnimatedSection animation="fadeInUp" delay={400}>
+              <p>
+                Founded in 1996 at Vattapara, Prakrithi School of Dance began as a humble initiative rooted in a deep commitment to making classical dance accessible to all. Under the visionary guidance of Dr. Kalamandalam Viswasree, the school was born from the belief that art should not be a privilege, but a path open to everyone—regardless of age, background, or social status.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={500}>
+              <p>
+                As the student community grew, so did the need for a dedicated space. On April 23, 2003, Prakrithi School of Dance found its permanent home in Kattayikonam, where it continues to thrive amidst a serene, natural environment that embodies its name—Prakrithi, meaning nature.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={500}>
+              <p>
+                Over the years, the school has blossomed into a vibrant cultural center, offering training in a diverse range of classical dance forms including Bharatanatyam, Mohiniyattom, Kuchipudi, Koodiyattam, and Nangiyarkoothu. Each class is taught with depth, discipline, and reverence for the traditional roots of the art forms.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={500}>
+              <p>
+                A standout initiative is "Matrukam Kalavedi", a revitalizing program for senior women—providing a space for them to reconnect with their passion for dance, discover joy in movement, and experience the confidence that comes with creative expression, regardless of age or previous experience.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={500}>
+              <p>
+                What makes Prakrithi truly unique is its economical fee structure and low-cost performance model, reflecting the founders’ mission to make classical art affordable and inclusive. Here, art is not a luxury—it is a way of life, a means to grow, and a tool for empowerment.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={500}>
+              <p>
+                Set in close harmony with nature, Prakrithi is more than a dance school—it is a community where character is built, relationships are nurtured, culture is celebrated, and students are encouraged to grow in both creative and academic excellence.
+              </p>
+            </AnimatedSection>
+          </div>
+        </section>
+      </AnimatedSection>
+
+
+                  {/* History & Legacy */}
+      <AnimatedSection animation="fadeIn" delay={200} className="mt-16">
+        <section id="journey" className="p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
+          <AnimatedSection animation="fadeInUp" delay={300}>
+            <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-4 sm:mb-6 text-center">
+              Why Prakriti?
+            </h2>
+          </AnimatedSection>
+          <div className="font-labrada text-base sm:text-lg text-gray-700 space-y-3 sm:space-y-4 leading-relaxed text-justify">
+            <AnimatedSection animation="fadeInUp" delay={400}>
+              <p>
+              More than just a dance school, Prakrithi is a vibrant community that combines movement, creativity, and connection. Here's what you can expect:
+              </p>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={500}>
+              <ul className="list-disc px-10">
+                <li>Groove to the rhythm and let loose</li>
+                <li>Savor meaningful conversations over tea</li>
+                <li>Build confidence and coordination</li>
+                <li>Express yourself freely</li>
+                <li>Develop leadership skills</li>
+                <li>Stay socially active and engaged</li>
+              </ul>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={500}>
+              <p>
+                Join Prakrithi and discover a holistic experience that will transform your life!
+              </p>
+            </AnimatedSection>
+          </div>
+        </section>
+      </AnimatedSection>
+
     </div>
+    
   </div>
 );
 
