@@ -140,7 +140,6 @@ export const Home = (): JSX.Element => {
 
         {/* Imported Sections */}
         <AboutTrainerSection />
-        <AboutDirectorSection/>
         <HomePagePerformances />
         <PerformancesSection />
         <ContactSectionHome />
