@@ -11,6 +11,7 @@ import AboutTrainerSection from "../components/AboutTrainerSection"; // Import n
 import HomePagePerformances from "../components/HomePagePerformances"; // Import new component
 import Navbar from "../components/Navbar"; // Import the Navbar component
 import { AnimatedSection } from "../components/AnimatedSection";
+import AboutDirectorSection from "../components/AboutDirectorSection";
 
 // Dance class cards data
 const danceClasses = [
@@ -139,6 +140,7 @@ export const Home = (): JSX.Element => {
 
         {/* Imported Sections */}
         <AboutTrainerSection />
+        <AboutDirectorSection/>
         <HomePagePerformances />
         <PerformancesSection />
         <ContactSectionHome />
