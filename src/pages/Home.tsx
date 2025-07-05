@@ -18,19 +18,19 @@ const danceClasses = [
   {
     id: 1,
     title: "Bharathanatyam",
-    image: "/dance1.png", // Ensure these paths are correct relative to public folder
+    image: "/bharata.webp", // Ensure these paths are correct relative to public folder
     description:
       "Experience our latest class additions featuring mesmerizing dance compositions and standalone performances that beautifully represent the richness of Indian art and culture. Join us now and immerse yourself in the magic.",
   },
   {
     id: 2,
     title: "Mohiniyattam",
-    image: "/Tperform1.png",
+    image: "/mohiniyattom.webp",
   },
   {
     id: 3,
     title: "Kuchipudi",
-    image: "/perfImage.png",
+    image: "/kuchupudi.webp",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const danceClasses = [
   {
     id: 5,
     title: "nangiyarkoothu",
-    image: "/perfImage.png", // Duplicate image, consider unique images
+    image: "/nangiar.JPG", // Duplicate image, consider unique images
   },
 ];
 

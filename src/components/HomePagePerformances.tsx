@@ -2,8 +2,8 @@ import React from 'react';
 import { Card } from './card'; // Assuming Card component is available
 
 const performanceImages = [
-    { id: 1, src: "/Tperform1.png", alt: "Performance 1" }, // Replace with actual paths in /public
-    { id: 2, src: "/Tperform2.png", alt: "Performance 2" }, // Replace with actual paths in /public
+    { id: 1, src: "/dance2.jpg", alt: "Performance 1" }, // Replace with actual paths in /public
+    { id: 2, src: "/dance3.jpg", alt: "Performance 2" }, // Replace with actual paths in /public
 ];
 
 const HomePagePerformances = () => {

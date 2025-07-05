@@ -10,9 +10,9 @@ const previousProgrammesData = {
   stackedImage: "/DancestackedImage.png", // Replace with your actual image path
   workshopButtonText: "Book a workshop",
   smallImages: [
-    { id: 1, src: "/perfImage.png", alt: "Previous programme 1" }, // Replace
-    { id: 2, src: "/perfImage.png", alt: "Previous programme 2" }, // Replace
-    { id: 3, src: "/perfImage.png", alt: "Previous programme 3" }, // Replace
+    { id: 1, src: "/dance4.jpg", alt: "Previous programme 1" }, // Replace
+    { id: 2, src: "/dance001.jpg", alt: "Previous programme 2" }, // Replace
+    { id: 3, src: "/dance002.jpg", alt: "Previous programme 3" }, // Replace
   ],
   eventCards: [
     {
