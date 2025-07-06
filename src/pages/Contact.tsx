@@ -19,7 +19,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
-  const phoneNumber = '+917907517186'; 
+  const phoneNumber = '+919400516033'; 
   const text = `Hello, my name is ${name}. ${message}`;
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
   window.open(url, '_blank');
@@ -37,7 +37,7 @@ const Contact = () => {
           <div className="w-full lg:w-1/2 flex flex-col gap-4">
             <AnimatedSection animation="slideInLeft" delay={200}>
               <div className="w-full overflow-hidden rounded-xl shadow-lg">
-                <img src={mainImage} alt="Contact Main" className="w-full h-auto object-cover aspect-[4/3] sm:aspect-video" />
+                <img src={mainImage} alt="Contact Main" className="w-full h-auto object-cover aspect-[4/3] sm:aspect-video" loading='lazy'/>
               </div>
             </AnimatedSection>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
