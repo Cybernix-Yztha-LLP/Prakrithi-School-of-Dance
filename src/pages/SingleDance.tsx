@@ -14,7 +14,7 @@ const dances = [
   {
     id: 'mohiniyattom',
     name: 'Mohiniyattom',
-    images:['mohiniyattom.webp']
+    images:['mohiniyattom.webp', 'mohiniyattom2.webp', 'mohiniyattom3.webp', 'mohiniyattom4.webp']
   },
   {
     id: 'kuchupudi',
@@ -67,7 +67,7 @@ const SingleDance = () => {
                 delay={700 + index * 200}
               >
                 <Card className="relative overflow-hidden rounded-2xl shadow-xl group min-h-[350px] sm:min-h-[400px]">
-                  <img src={`/${id}/${image}`} alt={dance.name} className="absolute inset-0 w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={`/${id}/${image}`} alt={dance.name} className="absolute inset-0 w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
                   <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-end">
                     <h3 className="font-labrada text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2">{}</h3>
                     <p className="font-labrada text-xs sm:text-sm text-gray-200 mb-3 sm:mb-4 line-clamp-3">{}</p>
