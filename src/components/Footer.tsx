@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -59,7 +59,7 @@ const Footer = () => {
                 <FaFacebookF className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/prakrithi_school_of_dance"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
@@ -67,12 +67,20 @@ const Footer = () => {
                 <FaInstagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://youtube.com/@prakrithischoolofdance"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
                 <FaYoutube className="w-5 h-5" />
+              </a>
+              <a
+                href="https://wa.me/+919400516033"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                <FaWhatsapp className="w-5 h-5" />
               </a>
             </div>
           </div>
