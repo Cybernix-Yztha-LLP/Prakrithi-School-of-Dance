@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'; // Import Navbar
 import Footer from './components/Footer'; // Import Footer
 import { LoginScreen } from './pages/LoginScreen'; // Import LoginScreen
 import { SignupScreen } from './pages/SignupScreen'; // Import SignupScreen
+import  SingleDance from './pages/SingleDance';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<LoginScreen />} /> {/* Add Login Route */}
             <Route path="/signup" element={<SignupScreen />} /> {/* Add Signup Route */}
-            {/* Add other routes here */}
+            <Route path="/dance/:id" element={<SingleDance />}/>
           </Routes>
         </main>
         <Footer />
