@@ -17,7 +17,7 @@ const HeroSection = () => {
 {/* Video Background */}
 <div className="absolute inset-0 w-full h-full pointer-events-none">
   <video
-    className="w-full h-full object-cover scale-150 md:scale-150 transition-transform duration-300 ease-in-out"
+    className="w-full h-full object-cover scale-150 md:scale-100 transition-transform duration-300 ease-in-out"
     autoPlay
     muted
     loop
