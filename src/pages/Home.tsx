@@ -83,7 +83,7 @@ export const Home = (): JSX.Element => {
               <AnimatedSection animation="scaleIn" delay={400} className="lg:w-1/2">
                 <Card
                   key={danceClasses[0].id}
-                  className="relative overflow-hidden border-none rounded-xl min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[591px] flex flex-col justify-end group hover:shadow-2xl transition-all duration-500"
+                  className="cursor-pointer relative overflow-hidden border-none rounded-xl min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[591px] flex flex-col justify-end group hover:shadow-2xl hover:scale-105 transition-all duration-500"
                   style={{
                     backgroundImage: `url(${danceClasses[0].image})`,
                     backgroundSize: "cover",
@@ -91,7 +91,7 @@ export const Home = (): JSX.Element => {
                   }}
                 >
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
-                  <CardContent className="relative z-10 p-4 md:p-6 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex flex-col sm:flex-row justify-between items-start sm:items-end w-full">
+                  <CardContent className="cursor-pointer relative z-10 p-4 md:p-6 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex flex-col sm:flex-row justify-between items-start sm:items-end w-full">
                     <div>
                       <Badge className="bg-black/40 backdrop-blur-sm rounded-lg font-labrada font-semibold text-white text-xs sm:text-sm md:text-base px-2 py-1 sm:px-3 sm:py-1.5 transform group-hover:scale-105 transition-transform duration-300">
                         {danceClasses[0].title}
@@ -117,7 +117,7 @@ export const Home = (): JSX.Element => {
                     delay={600 + index * 150}
                   >
                     <Card
-                      className="relative overflow-hidden border-none rounded-xl min-h-[200px] sm:min-h-[240px] md:min-h-[285px] flex flex-col justify-end group hover:shadow-xl hover:scale-105 transition-all duration-300"
+                      className="cursor-pointer relative overflow-hidden border-none rounded-xl min-h-[200px] sm:min-h-[240px] md:min-h-[285px] flex flex-col justify-end group hover:shadow-xl hover:scale-105 transition-all duration-300"
                       style={{
                         backgroundImage: `url(${danceClass.image})`,
                         backgroundSize: "cover",
