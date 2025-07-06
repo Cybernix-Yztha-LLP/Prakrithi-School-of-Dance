@@ -1,13 +1,16 @@
 import React from "react";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { useParams } from "react-router-dom";
+import { Card } from "../components/card";
 
 const dances = [
   {
     id: "bharatanatyam",
     name: "Bharatanatyam",
+    cover:"/dance4.jpg",
     images: [
-        '/dance1.png'
+        '/bharata.webp',
+        '/dance2.jpg'
 
     ]
   }
@@ -30,19 +33,10 @@ const SingleDance = () => {
               {dance.name}
             </h1>
           </AnimatedSection>
-          <AnimatedSection animation="fadeInUp" delay={200}>
-            <p className="mt-3 sm:mt-4 font-labrada text-lg sm:text-xl text-gray-600 max-w-prose lg:max-w-3xl mx-auto">
-              Nurturing talent and preserving the rich heritage of Indian classical dance.
-            </p>
-          </AnimatedSection>
         </header>
-
-        {/* Our Philosophy Section */}
         <AnimatedSection animation="fadeIn" delay={300}>
           <section className="mb-12 md:mb-20 bg-white rounded-xl shadow-2xl flex flex-col md:flex-row">
-            <AnimatedSection animation="fadeInUp" delay={400} className="m-0 p-0">
-              <img src={dance.images[0]} className="rounded-t-xl md:rounded-tl-xl md:rounded-bl-xl"/>
-            </AnimatedSection>
+              <img src={dance.cover} className="rounded-t-xl md:rounded-tl-xl md:rounded-bl-xl md:w-6/12 h-auto w-full"/>
             <div className="space-y-4 text-gray-700 font-labrada leading-relaxed text-justify p-6">
               <AnimatedSection animation="fadeInUp" delay={500}>
                 <p>
@@ -57,50 +51,28 @@ const SingleDance = () => {
             </div>
           </section>
         </AnimatedSection>
-
-        {/* Meet Our Mentor Section (using dance.name as placeholder) */}
-        <AnimatedSection animation="fadeIn" delay={200}>
-          <section className="mb-12 md:mb-20 p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
-            <AnimatedSection animation="fadeInUp" delay={300}>
-              <h2 className="text-center font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-8 sm:mb-10">
-                Meet Our Mentor
-              </h2>
-            </AnimatedSection>
-            <div className="text-center font-labrada text-base sm:text-lg text-gray-700 space-y-4 leading-relaxed">
-              <AnimatedSection animation="fadeInUp" delay={400}>
-                <p>{dance.name} is led by passionate teachers who bring years of experience to every class.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        {dance.images.map((image, index) => (
+              <AnimatedSection 
+                key={dance.id}
+                animation="slideInUp" 
+                delay={700 + index * 200}
+              >
+                <Card className="relative overflow-hidden rounded-2xl shadow-xl group min-h-[350px] sm:min-h-[400px]">
+                  <img src={image} alt={dance.name} className="absolute inset-0 w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-end">
+                    <h3 className="font-labrada text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2">{}</h3>
+                    <p className="font-labrada text-xs sm:text-sm text-gray-200 mb-3 sm:mb-4 line-clamp-3">{}</p>
+                  </div>
+                </Card>
               </AnimatedSection>
-              <AnimatedSection animation="fadeInUp" delay={500}>
-                <p>Under the guidance of the {dance.name} tradition, students develop discipline and creativity.</p>
-              </AnimatedSection>
-            </div>
-          </section>
-        </AnimatedSection>
-
-        {/* History & Legacy */}
-        <AnimatedSection animation="fadeIn" delay={200}>
-          <section className="p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
-            <AnimatedSection animation="fadeInUp" delay={300}>
-              <h2 className="text-center font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-6">
-                History & Legacy
-              </h2>
-            </AnimatedSection>
-            <div className="font-labrada text-gray-700 space-y-4 text-base sm:text-lg leading-relaxed text-justify">
-              <AnimatedSection animation="fadeInUp" delay={400}>
-                <p>
-                  {dance.name} has inspired generations of artists with its deep cultural roots and timeless beauty.
-                </p>
-              </AnimatedSection>
-              <AnimatedSection animation="fadeInUp" delay={500}>
-                <p>
-                  From humble beginnings to global recognition, {dance.name} continues to thrive in the hearts of learners.
-                </p>
-              </AnimatedSection>
-            </div>
-          </section>
-        </AnimatedSection>
+  ))}
+  </div>
+                    
       </div>
+      
     </div>
+    
   );
 };
 
