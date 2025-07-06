@@ -14,14 +14,19 @@ const HeroSection = () => {
       // style={{ backgroundImage: "url('/hero.svg')" }} // Removed background image style
     >
       {/* Video Background */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <video
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2"
-          autoPlay muted loop playsInline
-        >
-          <source src='https://res.cloudinary.com/dvsxwxcjq/video/upload/dance_t2ths7.webm'/>
-        </video>
-      </div>
+{/* Video Background */}
+<div className="absolute inset-0 w-full h-full pointer-events-none">
+  <video
+    className="w-full h-full object-cover scale-150 md:scale-150 transition-transform duration-300 ease-in-out"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src="https://res.cloudinary.com/dvsxwxcjq/video/upload/dance_t2ths7.webm" type="video/webm" />
+  </video>
+</div>
+
 
       {/* Dimming Overlay */}
       <div className="absolute inset-0 bg-black opacity-30"></div>
