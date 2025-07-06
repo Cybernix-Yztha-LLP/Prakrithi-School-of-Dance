@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Badge } from "../components/badge";
 import { Button } from "../components/button";
 import { Card, CardContent } from "../components/card";
@@ -17,6 +17,7 @@ import AboutDirectorSection from "../components/AboutDirectorSection";
 const danceClasses = [
   {
     id: 1,
+    link:'/dance/bharatanatyam',
     title: "Bharathanatyam",
     image: "/bharata.webp", // Ensure these paths are correct relative to public folder
     description:
@@ -24,21 +25,25 @@ const danceClasses = [
   },
   {
     id: 2,
+    link:'/dance/bharatanatyam',
     title: "Mohiniyattam",
     image: "/mohiniyattom.webp",
   },
   {
     id: 3,
+    link:'/dance/bharatanatyam',
     title: "Kuchipudi",
     image: "/kuchupudi.webp",
   },
   {
     id: 4,
+    link:'/dance/bharatanatyam',
     title: "Koodiyattam",
     image: "/face.jpg",
   },
   {
     id: 5,
+    link:'/dance/bharatanatyam',
     title: "nangiyarkoothu",
     image: "/nangiar.JPG", // Duplicate image, consider unique images
   },
@@ -116,6 +121,7 @@ export const Home = (): JSX.Element => {
                     animation="slideInUp" 
                     delay={600 + index * 150}
                   >
+                    <Link to={danceClass.link}>
                     <Card
                       className="cursor-pointer relative overflow-hidden border-none rounded-xl min-h-[200px] sm:min-h-[240px] md:min-h-[285px] flex flex-col justify-end group hover:shadow-xl hover:scale-105 transition-all duration-300"
                       style={{
@@ -131,6 +137,7 @@ export const Home = (): JSX.Element => {
                         </Badge>
                       </CardContent>
                     </Card>
+                    </Link>
                   </AnimatedSection>
                 ))}
               </div>
