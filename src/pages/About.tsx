@@ -142,20 +142,6 @@ const About = () => (
                   <p>{paragraph}</p>
                 </AnimatedSection>
               ))}
-              {founder.achievements && founder.achievements.length > 0 && (
-                <AnimatedSection animation="fadeInUp" delay={800}>
-                  <div className="mt-4 sm:mt-6">
-                    <h4 className="font-semibold text-lg sm:text-xl text-gray-800 mb-1.5 sm:mb-2">Key Highlights:</h4>
-                    <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm sm:text-base">
-                      {founder.achievements.map((achievement, index) => (
-                        <AnimatedSection key={index} animation="fadeIn" delay={900 + index * 100}>
-                          <li>{achievement}</li>
-                        </AnimatedSection>
-                      ))}
-                    </ul>
-                  </div>
-                </AnimatedSection>
-              )}
             </div>
           </div>
         </section>
