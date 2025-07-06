@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
+import { FaWhatsapp } from 'react-icons/fa';
 // Placeholder image paths - replace with your actual images in the /public folder
 const mainImage = "/perfMohini.jpg"; // Example: /images/contact/main.jpg
 const subImage1 = "/dance4.jpg"; // Example: /images/contact/sub1.jpg
@@ -87,7 +88,7 @@ const Contact = () => {
                   type="submit"
                   className="flex items-center justify-center gap-2 font-labrada font-medium bg-[#2c282a] text-white text-base sm:text-lg px-6 py-2.5 sm:px-8 sm:py-3 rounded-lg hover:bg-[#1a1818] transition-colors w-full mt-4"
                 >
-                  <img src="/public/whatsapp.svg" alt="WhatsApp" className="w-7 h-7" />Send Message
+                  <FaWhatsapp className='w-7 h-7'/>Send Message
                 </button>
               </AnimatedSection>
             </form>
