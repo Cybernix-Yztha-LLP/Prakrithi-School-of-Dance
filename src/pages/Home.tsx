@@ -17,7 +17,7 @@ import AboutDirectorSection from "../components/AboutDirectorSection";
 const danceClasses = [
   {
     id: 1,
-    link:'/dance/bharatanatyam',
+    link:'/dance/bharathanatyam',
     title: "Bharathanatyam",
     image: "/bharata.webp", // Ensure these paths are correct relative to public folder
     description:
@@ -25,25 +25,25 @@ const danceClasses = [
   },
   {
     id: 2,
-    link:'/dance/bharatanatyam',
+    link:'/dance/mohiniyattom',
     title: "Mohiniyattam",
     image: "/mohiniyattom.webp",
   },
   {
     id: 3,
-    link:'/dance/bharatanatyam',
+    link:'/dance/kuchupudi',
     title: "Kuchipudi",
     image: "/kuchupudi.webp",
   },
   {
     id: 4,
-    link:'/dance/bharatanatyam',
+    link:'#',
     title: "Koodiyattam",
     image: "/face.jpg",
   },
   {
     id: 5,
-    link:'/dance/bharatanatyam',
+    link:'#',
     title: "nangiyarkoothu",
     image: "/nangiar.JPG", // Duplicate image, consider unique images
   },
@@ -86,6 +86,7 @@ export const Home = (): JSX.Element => {
             {/* Large Card (First Item) */}
             {danceClasses.length > 0 && (
               <AnimatedSection animation="scaleIn" delay={400} className="lg:w-1/2">
+                <Link to={danceClasses[0].link}>
                 <Card
                   key={danceClasses[0].id}
                   className="cursor-pointer relative overflow-hidden border-none rounded-xl min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[591px] flex flex-col justify-end group hover:shadow-2xl hover:scale-105 transition-all duration-500"
@@ -109,6 +110,7 @@ export const Home = (): JSX.Element => {
                     )}
                   </CardContent>
                 </Card>
+              </Link>
               </AnimatedSection>
             )}
 
