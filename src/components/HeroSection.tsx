@@ -15,14 +15,12 @@ const HeroSection = () => {
     >
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <iframe
+        <video
           className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&rel=0&showinfo=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0`}
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen={false} // allowFullScreen on iframe itself, not user control
-          title="Background Video" // For accessibility
-        ></iframe>
+          autoPlay muted loop playsInline
+        >
+          <source src='https://res.cloudinary.com/dvsxwxcjq/video/upload/dance_t2ths7.webm'/>
+        </video>
       </div>
 
       {/* Dimming Overlay */}
@@ -56,16 +54,16 @@ const HeroSection = () => {
           </Button>
         </AnimatedSection>
         
-        <AnimatedSection animation="fadeInRight" delay={1400}>
-          {/* <Button
+        {/* <AnimatedSection animation="fadeInRight" delay={1400}>
+          <Button
             variant="outline"
             className="bg-white/90 hover:bg-white text-gray-800 hover:text-black font-labrada font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 ease-in-out group text-sm sm:text-base w-full sm:w-auto border-white/50"
             onClick={() => navigate("/signup")} // Link to signup page
           >
             Sign up
             <ArrowRight className="ml-1.5 sm:ml-2 h-4 w-4 sm:h-5 sm:w-5 text-gray-700 group-hover:text-black group-hover:translate-x-1 transition-all duration-300" />
-          </Button> */}
-        </AnimatedSection>
+          </Button>
+        </AnimatedSection> */}
       </div>
     </section>
   );

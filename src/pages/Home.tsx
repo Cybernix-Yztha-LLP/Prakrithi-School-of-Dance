@@ -35,7 +35,7 @@ const danceClasses = [
   {
     id: 4,
     title: "Koodiyattam",
-    image: "/dance2.png",
+    image: "/face.jpg",
   },
   {
     id: 5,
