@@ -24,6 +24,7 @@ const HeroSection = () => {
     playsInline
   >
     <source src="https://res.cloudinary.com/dvsxwxcjq/video/upload/dance_t2ths7.webm" type="video/webm" />
+    <source src="https://res.cloudinary.com/dvsxwxcjq/video/upload/dance_ublg4u.mp4" type="video/mp4"/>
   </video>
 </div>
 
