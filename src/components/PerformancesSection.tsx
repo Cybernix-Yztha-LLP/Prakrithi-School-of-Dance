@@ -23,7 +23,7 @@ const previousProgrammesData = {
     },
         {
       id: 2,
-      eventName: "Dance",
+      eventName: "Matrukam Kalavedi",
       image: "/perfMohini.jpg", // Replace
       description: "",
     }
