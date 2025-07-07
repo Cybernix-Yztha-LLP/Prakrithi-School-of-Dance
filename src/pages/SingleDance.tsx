@@ -2,24 +2,22 @@ import React from "react";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { useParams } from "react-router-dom";
 import { Card } from "../components/card";
-import { Images } from "lucide-react";
-
 const dances = [
   {
     id: "bharathanatyam",
     name: "Bharatanatyam",
-    images:['bharatanatyam1.webp', 'bharathanatyam2.webp', 'bharathanatyam3.webp', 'bharathanatyam4.webp', 'bharathanatyam7.webp', 'bharathanatyam8.webp', 'bharathanatyam9.webp', 'bharathanatyam10.webp']
+    images:['B1.webp', 'B2.webp', 'B3.webp', 'B4.webp', 'B5.webp', 'B6.webp', 'B9.webp', 'B11.webp', 'B12.webp', 'B13.webp', 'B14.webp', 'B15.webp', 'B16.webp', 'B17.webp', 'B18.webp']
 
   },
   {
     id: 'mohiniyattom',
     name: 'Mohiniyattom',
-    images:['mohiniyattom.webp', 'mohiniyattom2.webp', 'mohiniyattom3.webp', 'mohiniyattom4.webp']
+    images:['M1.webp', 'M2.webp', 'M3.webp', 'M4.webp']
   },
   {
     id: 'kuchupudi',
     name: 'Kuchupudi',
-    images:['kuchupudi1.webp', 'kuchupudi2.webp']
+    images:['K1.webp', 'K2.webp','K3.webp','K4.webp']
 
   }
 ];
