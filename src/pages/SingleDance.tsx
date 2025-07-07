@@ -2,6 +2,7 @@ import React from "react";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { useParams } from "react-router-dom";
 import { Card } from "../components/card";
+
 const dances = [
   {
     id: "bharathanatyam",
@@ -19,6 +20,16 @@ const dances = [
     name: 'Kuchupudi',
     images:['K1.webp', 'K2.webp','K3.webp','K4.webp']
 
+  },
+  {
+    id: 'pooja',
+    name: 'Pooja Fest',
+    images:['P1.webp.png','P2.webp', 'P3.webp', 'P4.webp', 'P6.webp', 'P7.webp', 'P8.webp', 'P9.webp', 'P10.webp', 'P11.webp', 'P12.webp', 'P13.webp', 'P14.webp', 'P15.webp', 'P16.webp']
+  },
+  {
+    id:'matrukam-kalavedi',
+    name:'Matrukam Kalavedi',
+    images:['MK1.webp','MK2.webp','MK3.webp']
   }
 ];
 
@@ -60,17 +71,17 @@ const SingleDance = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {dance.images.map((image, index) => (
               <AnimatedSection 
-                key={dance.id}
+                key={index}
                 animation="slideInUp" 
                 delay={700 + index * 200}
               >
-                <Card className="relative overflow-hidden rounded-2xl shadow-xl group min-h-[350px] sm:min-h-[400px]">
-                  <img src={`/${id}/${image}`} alt={dance.name} className="absolute inset-0 w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+                <div className="max-h-full max-w-full relative overflow-hidden rounded-2xl shadow-xl aspect-w-4 aspect-h-3">
+                  <img src={`/${id}/${image}`} alt={dance.name} className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
                   <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-end">
                     <h3 className="font-labrada text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2">{}</h3>
                     <p className="font-labrada text-xs sm:text-sm text-gray-200 mb-3 sm:mb-4 line-clamp-3">{}</p>
                   </div>
-                </Card>
+                </div>
               </AnimatedSection>
   ))}
   </div>

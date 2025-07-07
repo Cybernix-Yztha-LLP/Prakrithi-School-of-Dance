@@ -20,12 +20,14 @@ const previousProgrammesData = {
       eventName: "Pooja Fest",
       image: "/dancedance.jpg", // Replace
       description: "",
+      url:'dance/pooja'
     },
         {
       id: 2,
       eventName: "Matrukam Kalavedi",
       image: "/perfMohini.jpg", // Replace
       description: "",
+      url: 'dance/matrukam-kalavedi'
     }
   ],
 };
@@ -101,7 +103,7 @@ const PerformancesSection = () => {
                 {previousProgrammesData.smallImages.map((image, index) => (
                   <AnimatedSection key={image.id} animation="zoomIn" delay={500 + index * 150}>
                     <div className="aspect-video overflow-hidden rounded-lg">
-                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading='lazy'/>
                     </div>
                   </AnimatedSection>
                 ))}
@@ -117,11 +119,12 @@ const PerformancesSection = () => {
                 delay={700 + index * 200}
               >
                 <Card className="relative overflow-hidden rounded-2xl shadow-xl group min-h-[350px] sm:min-h-[400px]">
-                  <img src={event.image} alt={event.eventName} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={event.image} alt={event.eventName} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading='lazy' />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:p-6 flex flex-col justify-end">
                     <h3 className="font-labrada text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2">{event.eventName}</h3>
                     <p className="font-labrada text-xs sm:text-sm text-gray-200 mb-3 sm:mb-4 line-clamp-3">{event.description}</p>
                     <Button
+                      onClick={() => navigate(event.url)}
                       variant="outline"
                       size="sm"
                       className="bg-white/20 hover:bg-white/30 text-white border-white/50 backdrop-blur-sm font-labrada self-start px-3 py-1 sm:px-4 rounded-md text-xs"

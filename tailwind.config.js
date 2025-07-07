@@ -196,6 +196,10 @@ export default { // Changed to ES module syntax, common for Vite
     },
     container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
   },
-  plugins: [require("tailwindcss-animate")], // Added tailwindcss-animate based on keyframes
+  plugins: [
+  require("tailwindcss-animate"),
+  require("@tailwindcss/aspect-ratio"),
+],
+ // Added tailwindcss-animate based on keyframes
   darkMode: ["class"],
 };
