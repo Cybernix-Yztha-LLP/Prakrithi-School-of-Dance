@@ -1,19 +1,19 @@
-import React from "react";
-
 import { Link, useNavigate } from "react-router-dom";
 import { Badge } from "../components/badge";
-import { Button } from "../components/button";
 import { Card, CardContent } from "../components/card";
 import HeroSection from "../components/HeroSection"; // Assuming HeroSection is moved to components
-import PerformancesSection from "../components/PerformancesSection"; // Assuming PerformancesSection is moved/created
-import ContactSectionHome from "../components/ContactSectionHome"; // Assuming ContactSectionHome is moved/created
-import AboutTrainerSection from "../components/AboutTrainerSection"; // Import new component
-import HomePagePerformances from "../components/HomePagePerformances"; // Import new component
 import Navbar from "../components/Navbar"; // Import the Navbar component
 import { AnimatedSection } from "../components/AnimatedSection";
-import AboutDirectorSection from "../components/AboutDirectorSection";
+import { lazy } from "react";
 
-// Dance class cards data
+
+//lazy import the components
+
+const AboutTrainerSection = lazy(() => import("../components/AboutTrainerSection"));
+const HomePagePerformances = lazy(() => import("../components/HomePagePerformances"));
+const PerformancesSection = lazy(() => import("../components/PerformancesSection"));
+const ContactSectionHome = lazy(() => import("../components/ContactSectionHome"))
+
 const danceClasses = [
   {
     id: 1,
@@ -49,7 +49,7 @@ const danceClasses = [
   },
 ];
 
-export const Home = (): JSX.Element => {
+const Home = (): JSX.Element => {
   const navigate = useNavigate();
 
   return (
@@ -156,3 +156,5 @@ export const Home = (): JSX.Element => {
     </div>
   );
 };
+
+export default Home;
