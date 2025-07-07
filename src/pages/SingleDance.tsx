@@ -7,7 +7,7 @@ const dances = [
   {
     id: "bharathanatyam",
     name: "Bharatanatyam",
-    images:['B1.webp', 'B2.webp', 'B3.webp', 'B4.webp', 'B5.webp', 'B6.webp', 'B9.webp', 'B11.webp', 'B12.webp', 'B13.webp', 'B14.webp', 'B15.webp', 'B16.webp', 'B17.webp', 'B18.webp']
+    images:['B1.webp', 'B2.webp', 'B3.webp', 'B4.webp', 'B5.webp', 'B6.webp', 'B9.webp.png', 'B11.webp', 'B12.webp', 'B13.webp', 'B14.webp', 'B15.webp', 'B16.webp', 'B17.webp', 'B18.webp']
 
   },
   {
