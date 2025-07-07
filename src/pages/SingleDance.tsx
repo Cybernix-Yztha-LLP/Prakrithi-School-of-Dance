@@ -2,7 +2,7 @@ import React from "react";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { useParams } from "react-router-dom";
 import { Card } from "../components/card";
-
+import { Image } from '@imagekit/react';
 const dances = [
   {
     id: "bharathanatyam",
@@ -76,7 +76,7 @@ const SingleDance = () => {
                 delay={700 + index * 200}
               >
                 <div className="max-h-full max-w-full relative overflow-hidden rounded-2xl shadow-xl aspect-w-4 aspect-h-3">
-                  <img src={`/${id}/${image}`} alt={dance.name} className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+                  <Image urlEndpoint='https://ik.imagekit.io/tlwmjfavy/' src={`/public/${id}/${image}`} alt={dance.name} className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-105" loading="lazy" width='489' height='652'/>
                   <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-end">
                     <h3 className="font-labrada text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2">{}</h3>
                     <p className="font-labrada text-xs sm:text-sm text-gray-200 mb-3 sm:mb-4 line-clamp-3">{}</p>
