@@ -19,7 +19,7 @@ const danceClasses = [
     id: 1,
     link:'/dance/bharathanatyam',
     title: "Bharathanatyam",
-    image: "B18.webp", // Ensure these paths are correct relative to public folder
+    image: "bharathanatyam/B18.webp", // Ensure these paths are correct relative to public folder
     description:
       "Experience our latest class additions featuring mesmerizing dance compositions and standalone performances that beautifully represent the richness of Indian art and culture. Join us now and immerse yourself in the magic.",
   },
@@ -33,7 +33,7 @@ const danceClasses = [
     id: 3,
     link:'/dance/kuchupudi',
     title: "Kuchipudi",
-    image: "K2.webp",
+    image: "/kuchupudi/K2.webp",
   },
   {
     id: 4,
@@ -91,7 +91,7 @@ const Home = (): JSX.Element => {
                   key={danceClasses[0].id}
                   className="cursor-pointer relative overflow-hidden border-none rounded-xl min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[591px] flex flex-col justify-end group hover:shadow-2xl hover:scale-105 transition-all duration-500"
                   style={{
-                    backgroundImage: `url(https://ik.imagekit.io/tlwmjfavy/public/bharathanatyam/${danceClasses[0].image})`,
+                    backgroundImage: `url(https://ik.imagekit.io/tlwmjfavy/public/${danceClasses[0].image}?tr=w-750,h-700)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
@@ -127,7 +127,7 @@ const Home = (): JSX.Element => {
                     <Card
                       className="cursor-pointer relative overflow-hidden border-none rounded-xl min-h-[200px] sm:min-h-[240px] md:min-h-[285px] flex flex-col justify-end group hover:shadow-xl hover:scale-105 transition-all duration-300"
                       style={{
-                        backgroundImage: `url(https://ik.imagekit.io/tlwmjfavy/public/${danceClass.image})`,
+                        backgroundImage: `url(https://ik.imagekit.io/tlwmjfavy/public/${danceClass.image}?tr=w-500,h-500)`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                       }}

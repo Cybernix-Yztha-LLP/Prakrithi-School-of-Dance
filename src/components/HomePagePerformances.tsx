@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card } from './card'; // Assuming Card component is available
-
+import { Image } from '@imagekit/react';
 const performanceImages = [
-    { id: 1, src: "/dance2.jpg", alt: "Performance 1" }, // Replace with actual paths in /public
-    { id: 2, src: "/dance3.jpg", alt: "Performance 2" }, // Replace with actual paths in /public
+    { id: 1, src: "/pooja/P7.webp", alt: "Performance 1" }, // Replace with actual paths in /public
+    { id: 2, src: "/pooja/P10.webp", alt: "Performance 2" }, // Replace with actual paths in /public
 ];
 
 const HomePagePerformances = () => {
@@ -16,10 +16,12 @@ const HomePagePerformances = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                     {performanceImages.map((image, index) => (
                         <Card key={image.id} className="overflow-hidden rounded-xl shadow-lg animate-fadeInUp" style={{ animationDelay: `${0.1 + index * 0.1}s` }}>
-                            <img
+                            <Image
+                                urlEndpoint='https://ik.imagekit.io/tlwmjfavy/public' 
                                 src={image.src}
                                 alt={image.alt}
                                 className="w-full h-60 sm:h-72 md:h-80 lg:h-96 object-cover transform hover:scale-105 transition-transform duration-300 rounded-xl"
+                                transformation={[{width:900,height:600}]}
                             />
                         </Card>
                     ))}

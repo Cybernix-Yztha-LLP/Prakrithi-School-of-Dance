@@ -5,20 +5,21 @@ import { ArrowRight } from 'lucide-react'; // Assuming lucide-react for icons
 import { AnimatedSection } from './AnimatedSection';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { Image } from '@imagekit/react';
 // Placeholder data for previous programmes
 const previousProgrammesData = {
-  stackedImage: "/dancestacked.JPG", // Replace with your actual image path
+  stackedImage: "/bharathanatyam/B3.webp", // Replace with your actual image path
   workshopButtonText: "Book a workshop",
   smallImages: [
-    { id: 1, src: "/dance4.jpg", alt: "Previous programme 1" }, // Replace
-    { id: 2, src: "/dance001.jpg", alt: "Previous programme 2" }, // Replace
-    { id: 3, src: "/dance002.jpg", alt: "Previous programme 3" }, // Replace
+    { id: 1, src: "/face.jpg", alt: "Previous programme 1" }, // Replace
+    { id: 2, src: "/mohiniyattom/M3.webp", alt: "Previous programme 2" }, // Replace
+    { id: 3, src: "/bharathanatyam/B11.webp", alt: "Previous programme 3" }, // Replace
   ],
   eventCards: [
     {
       id: 1,
       eventName: "Pooja Fest",
-      image: "/dancedance.jpg", // Replace
+      image: "/pooja/P13.webp",
       description: "",
       url:'dance/pooja'
     },
@@ -51,10 +52,12 @@ const PerformancesSection = () => {
                 delay={400}
                 className="absolute inset-0 w-full h-full"
               >
-                <img 
+                <Image
+                urlEndpoint='https://ik.imagekit.io/tlwmjfavy/public' 
                   src={previousProgrammesData.stackedImage} 
                   alt="Previous programme highlight" 
                   className="w-full h-full rounded-xl shadow-2xl transform -rotate-6 transition-all duration-700 ease-out group-hover:-rotate-12 group-hover:scale-105 group-hover:shadow-3xl object-top overflow-hidden"
+                  transformation={[{width:100, height:100}]}
                 />
               </AnimatedSection>
               
@@ -63,10 +66,11 @@ const PerformancesSection = () => {
                 delay={600}
                 className="absolute inset-0 w-full h-full"
               >
-                <img 
-                  src={previousProgrammesData.stackedImage}
-                  alt="Previous programme highlight" 
+                <Image
+                urlEndpoint='https://ik.imagekit.io/tlwmjfavy/public' 
+                  src={previousProgrammesData.stackedImage} 
                   className="w-full h-full object-cover rounded-xl shadow-2xl transform rotate-3 transition-all duration-700 ease-out group-hover:rotate-6 group-hover:scale-105 group-hover:shadow-3xl"
+                  transformation={[{width:100,height:100}]}
                 />
               </AnimatedSection>
               
@@ -75,10 +79,11 @@ const PerformancesSection = () => {
                 delay={800}
                 className="relative w-full h-full"
               >
-                <img 
-                  src={previousProgrammesData.stackedImage}
-                  alt="Previous programme highlight" 
+                <Image
+                urlEndpoint='https://ik.imagekit.io/tlwmjfavy/public' 
+                  src={previousProgrammesData.stackedImage} 
                   className="w-full h-full object-cover rounded-xl shadow-2xl transition-all duration-700 ease-out group-hover:scale-110 group-hover:shadow-3xl group-hover:z-10"
+                  transformation={[{width:500,height:500}]}
                 />
               </AnimatedSection>
             </AnimatedSection>
@@ -103,7 +108,7 @@ const PerformancesSection = () => {
                 {previousProgrammesData.smallImages.map((image, index) => (
                   <AnimatedSection key={image.id} animation="zoomIn" delay={500 + index * 150}>
                     <div className="aspect-video overflow-hidden rounded-lg">
-                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading='lazy'/>
+                      <Image urlEndpoint='https://ik.imagekit.io/tlwmjfavy/public' src={image.src} alt={image.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading='lazy'/>
                     </div>
                   </AnimatedSection>
                 ))}
@@ -120,7 +125,7 @@ const PerformancesSection = () => {
               >
                 <Link to={event.url}>
                 <Card className="relative overflow-hidden rounded-2xl shadow-xl group min-h-[350px] sm:min-h-[400px]">
-                  <img src={event.image} alt={event.eventName} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading='lazy' />
+                  <Image  urlEndpoint='https://ik.imagekit.io/tlwmjfavy/public' src={event.image} alt={event.eventName} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading='lazy' transformation={[{ width: 700, height: 500 }]}/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 sm:p-6 flex flex-col justify-end">
                     <h3 className="font-labrada text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2">{event.eventName}</h3>
                     <p className="font-labrada text-xs sm:text-sm text-gray-200 mb-3 sm:mb-4 line-clamp-3">{event.description}</p>
