@@ -37,12 +37,6 @@ const danceClasses = [
   },
   {
     id: 4,
-    link:'#',
-    title: "Koodiyattam",
-    image: "/face.jpg",
-  },
-  {
-    id: 5,
     link:'/dance/nangiyarkoothu',
     title: "Nangiyarkoothu",
     image: "/nangiar.JPG", // Duplicate image, consider unique images
@@ -116,7 +110,7 @@ const Home = (): JSX.Element => {
 
             {/* Grid for Smaller Cards (Remaining Items) */}
             {danceClasses.length > 1 && (
-              <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="lg:w-1/2 grid grid-cols-2 sm:grid-cols-2 gap-6">
                 {danceClasses.slice(1).map((danceClass, index) => (
                   <AnimatedSection 
                     key={danceClass.id}
