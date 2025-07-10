@@ -43,8 +43,8 @@ const danceClasses = [
   },
   {
     id: 5,
-    link:'#',
-    title: "nangiyarkoothu",
+    link:'/dance/nangiyarkoothu',
+    title: "Nangiyarkoothu",
     image: "/nangiar.JPG", // Duplicate image, consider unique images
   },
 ];

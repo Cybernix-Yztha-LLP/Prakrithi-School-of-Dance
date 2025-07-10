@@ -10,6 +10,7 @@ import Navbar from './components/Navbar'; // Import Navbar
 import Footer from './components/Footer'; // Import Footer
 import { LoginScreen } from './pages/LoginScreen'; // Import LoginScreen
 import { SignupScreen } from './pages/SignupScreen'; // Import SignupScreen
+import ScrolltoTop from './components/ScrolltoTop';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <main className="flex-grow"> {/* Allow content to grow and push footer */}
           <Suspense fallback={<div>Loading...</div>}>
+          <ScrolltoTop/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

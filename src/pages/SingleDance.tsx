@@ -30,6 +30,11 @@ const dances = [
     id:'matrukam-kalavedi',
     name:'Matrukam Kalavedi',
     images:['MK1.webp','MK2.webp','MK3.webp']
+  },
+  {
+    id:'nangiyarkoothu',
+    name:'Nangiyarkoothu',
+    images:['N1.jpg','N2.jpg','N3.jpg','N4.jpg']
   }
 ];
 
@@ -45,11 +50,11 @@ const SingleDance = () => {
     <div className="min-h-screen py-12 md:py-16 pt-[80px] sm:pt-[100px] md:pt-[120px] lg:pt-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-12 md:mb-16">
-          <AnimatedSection animation="fadeInUp" duration={800}>
+          <section>
             <h1 className="font-labrada text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#636161] tracking-tight">
               {dance.name}
             </h1>
-          </AnimatedSection>
+          </section>
         </header>
         {/* <AnimatedSection animation="fadeIn" delay={300}>
           <section className="mb-12 md:mb-20 bg-white rounded-xl shadow-2xl flex flex-col md:flex-row">
@@ -70,19 +75,16 @@ const SingleDance = () => {
         </AnimatedSection> */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {dance.images.map((image, index) => (
-              <AnimatedSection 
-                key={index}
-                animation="slideInUp" 
-                delay={700 + index * 200}
+              <section key={index}
               >
-                <div className="max-h-full max-w-full relative overflow-hidden rounded-2xl shadow-xl aspect-w-4 aspect-h-3">
+                <div className="max-h-full max-w-full relative rounded-2xl shadow-xl aspect-w-4 aspect-h-3">
                   <Image urlEndpoint='https://ik.imagekit.io/tlwmjfavy/' src={`/public/${id}/${image}`} alt={dance.name} className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-105" loading="lazy" width='489' height='652'/>
                   <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-end">
                     <h3 className="font-labrada text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2">{}</h3>
                     <p className="font-labrada text-xs sm:text-sm text-gray-200 mb-3 sm:mb-4 line-clamp-3">{}</p>
                   </div>
                 </div>
-              </AnimatedSection>
+              </section>
   ))}
   </div>
                     
