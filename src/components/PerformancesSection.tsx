@@ -26,7 +26,7 @@ const previousProgrammesData = {
         {
       id: 2,
       eventName: "Matrukam Kalavedi",
-      image: "/perfMohini.jpg", // Replace
+      image: "/mohiniyattom/M3.webp", // Replace
       description: "",
       url: 'dance/matrukam-kalavedi'
     }
