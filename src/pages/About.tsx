@@ -6,7 +6,7 @@ const founder = {
   name: "Dr. Kalamandalam Viswasree",
   image: "/trainer.png", // Replace with actual path to founder's image
   bio: [
-    "Smt. Anjali Nair, the visionary founder of Prakrithi School of Dance, is a distinguished classical dancer with over two decades of profound experience in performing and teaching.",
+    "Dr. Kalamandalam Viswasree, the visionary founder of Prakrithi School of Dance, is a distinguished classical dancer with over two decades of profound experience in performing and teaching.",
     "Her dedication to the art form is evident in her meticulous approach to training, where she imparts not just techniques but also the cultural and spiritual essence of Indian classical dance.",
     "Having graced numerous prestigious stages and trained hundreds of aspiring dancers, Smt. Anjali Nair continues to inspire a deep appreciation for India's rich artistic heritage.",
   ],
