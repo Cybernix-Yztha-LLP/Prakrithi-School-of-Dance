@@ -11,9 +11,9 @@ const founder = {
     "Having graced numerous prestigious stages and trained hundreds of aspiring dancers, Smt. Anjali Nair continues to inspire a deep appreciation for India's rich artistic heritage.",
   ],
   achievements: [
-    "Recipient of [Name of Award/Recognition]",
-    "Performed at [Notable Festival/Venue]",
-    "Choreographed [Number] unique dance productions",
+    // "Recipient of [Name of Award/Recognition]",
+    // "Performed at [Notable Festival/Venue]",
+    // "Choreographed [Number] unique dance productions",
   ],
 };
 const directorInfo = {
@@ -99,7 +99,7 @@ const About = () => (
                   <p>{paragraph}</p>
                 </AnimatedSection>
               ))}
-              {founder.achievements && founder.achievements.length > 0 && (
+              {/* {founder.achievements && founder.achievements.length > 0 && (
                 <AnimatedSection animation="fadeInUp" delay={800}>
                   <div className="mt-4 sm:mt-6">
                     <h4 className="font-semibold text-lg sm:text-xl text-gray-800 mb-1.5 sm:mb-2">Key Highlights:</h4>
@@ -111,8 +111,8 @@ const About = () => (
                       ))}
                     </ul>
                   </div>
-                </AnimatedSection>
-              )}
+                </AnimatedSection> */}
+              {/* )} */}
             </div>
           </div>
         </section>
