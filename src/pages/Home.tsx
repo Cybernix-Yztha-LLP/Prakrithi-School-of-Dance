@@ -59,7 +59,7 @@ const Home = (): JSX.Element => {
   <section id="classes" className="py-12 md:py-16">
     <div className="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-lg">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/fT5_HQpS4mE?si=Fht0WGy-0w-tW1dU"
+        src="https://www.youtube-nocookie.com/embed/fT5_HQpS4mE?rel=0&si=Fht0WGy-0w-tW1dU"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
