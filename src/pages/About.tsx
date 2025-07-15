@@ -8,7 +8,8 @@ const founder = {
   bio: [
     "Dr. Kalamandalam Viswasree, the visionary founder of Prakrithi School of Dance, is a distinguished classical dancer with over two decades of profound experience in performing and teaching.",
     "Her dedication to the art form is evident in her meticulous approach to training, where she imparts not just techniques but also the cultural and spiritual essence of Indian classical dance.",
-    "Having graced numerous prestigious stages and trained hundreds of aspiring dancers, Smt. Anjali Nair continues to inspire a deep appreciation for India's rich artistic heritage.",
+    "Having graced numerous prestigious stages and trained hundreds of aspiring dancers, Dr. Kalamandalam Viswasree continues to inspire a deep appreciation for India's rich artistic heritage.",
+    "Dr Kalamandalam Viswasree is a rank holder from Kerala Kalamandalam as well as from Sri Sanakara Sanskrit  College and completed her Ph.D from Kerala University."
   ],
   achievements: [
     // "Recipient of [Name of Award/Recognition]",
@@ -24,7 +25,7 @@ const directorInfo = {
   
   "With a solid educational foundation, Praveen holds Diplomas in Civil Engineering and Computer Engineering, a Master’s Degree in Malayalam (M.A.), a Bachelor of Education (B.Ed.), and is a qualified UGC-NET holder. His academic pursuits reflect a rare combination of technical precision and literary depth.",
   
-  "Praveen began his professional journey as a teacher, bringing his passion for education into classrooms across various reputed institutions. His teaching career includes notable roles at Technical High School, Pongumoodu, Loyola School, SNGK Teacher Education College, and Dr. A.M.M.R. Memorial Residential Higher Secondary School. His experience in both secondary and teacher education sectors adds depth to his leadership style and his approach to holistic development.",
+  "Praveen began his professional journey as a teacher, bringing his passion for education into classrooms across various reputed institutions. His teaching career includes notable roles at Technical High School, Pongumoodu, Loyola School, SNGK Teacher Education College, and Dr. A.M.M.R. Higher Secondary School. His experience in both secondary and teacher education sectors adds depth to his leadership style and his approach to holistic development.",
   
   "He also served as the Chairman of the Union at Sree Sankaracharya University of Sanskrit during the academic year 2001–2002, showcasing early leadership qualities and a strong commitment to cultural and student affairs.",
   
@@ -152,7 +153,7 @@ const About = () => (
         <section id="journey" className="p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
           <AnimatedSection animation="fadeInUp" delay={300}>
             <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-4 sm:mb-6 text-center">
-              Our Journey
+              Pooja Fest
             </h2>
           </AnimatedSection>
           <div className="font-labrada text-base sm:text-lg text-gray-700 space-y-3 sm:space-y-4 leading-relaxed text-justify">
@@ -219,7 +220,7 @@ const About = () => (
         <section id="journey" className="p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
           <AnimatedSection animation="fadeInUp" delay={300}>
             <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-4 sm:mb-6 text-center">
-              Why Prakriti?
+              Why Prakrithi?
             </h2>
           </AnimatedSection>
           <div className="font-labrada text-base sm:text-lg text-gray-700 space-y-3 sm:space-y-4 leading-relaxed text-justify">

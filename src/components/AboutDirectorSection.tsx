@@ -8,7 +8,7 @@ const directorInfo = {
   
   "With a solid educational foundation, Praveen holds Diplomas in Civil Engineering and Computer Engineering, a Master’s Degree in Malayalam (M.A.), a Bachelor of Education (B.Ed.), and is a qualified UGC-NET holder. His academic pursuits reflect a rare combination of technical precision and literary depth.",
   
-  "Praveen began his professional journey as a teacher, bringing his passion for education into classrooms across various reputed institutions. His teaching career includes notable roles at Technical High School, Pongumoodu, Loyola School, SNGK Teacher Education College, and Dr. A.M.M.R. Memorial Residential Higher Secondary School. His experience in both secondary and teacher education sectors adds depth to his leadership style and his approach to holistic development.",
+  "Praveen began his professional journey as a teacher, bringing his passion for education into classrooms across various reputed institutions. His teaching career includes notable roles at Technical High School, Pongumoodu, Loyola School, SNGK Teacher Education College, and Dr. A.M.M.R. Higher Secondary School. His experience in both secondary and teacher education sectors adds depth to his leadership style and his approach to holistic development.",
   
   "He also served as the Chairman of the Union at Sree Sankaracharya University of Sanskrit during the academic year 2001–2002, showcasing early leadership qualities and a strong commitment to cultural and student affairs.",
   
