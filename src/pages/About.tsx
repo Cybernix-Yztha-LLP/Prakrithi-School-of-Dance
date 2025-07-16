@@ -9,7 +9,7 @@ const founder = {
     "Dr. Kalamandalam Viswasree, the visionary founder of Prakrithi School of Dance, is a distinguished classical dancer with over two decades of profound experience in performing and teaching.",
     "Her dedication to the art form is evident in her meticulous approach to training, where she imparts not just techniques but also the cultural and spiritual essence of Indian classical dance.",
     "Having graced numerous prestigious stages and trained hundreds of aspiring dancers, Dr. Kalamandalam Viswasree continues to inspire a deep appreciation for India's rich artistic heritage.",
-    "Dr Kalamandalam Viswasree is a rank holder from Kerala Kalamandalam as well as from Sri Sanakara Sanskrit  College and completed her Ph.D from Kerala University."
+    "Dr Kalamandalam Viswasree is a rank holder from Kerala Kalamandalam as well as from Sree Sankaracharya University of Sanskrit and completed her Ph.D from Kerala University."
   ],
   achievements: [
     // "Recipient of [Name of Award/Recognition]",
@@ -153,7 +153,7 @@ const About = () => (
         <section id="journey" className="p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
           <AnimatedSection animation="fadeInUp" delay={300}>
             <h2 className="font-labrada text-2xl sm:text-3xl md:text-4xl font-semibold text-rose-600 mb-4 sm:mb-6 text-center">
-              Pooja Fest
+              Prakrithi Fest
             </h2>
           </AnimatedSection>
           <div className="font-labrada text-base sm:text-lg text-gray-700 space-y-3 sm:space-y-4 leading-relaxed text-justify">

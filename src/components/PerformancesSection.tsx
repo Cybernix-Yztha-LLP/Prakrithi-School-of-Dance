@@ -18,7 +18,7 @@ const previousProgrammesData = {
   eventCards: [
     {
       id: 1,
-      eventName: "Pooja Fest",
+      eventName: "Prakrithi Fest",
       image: "/pooja/P13.webp",
       description: "",
       url:'dance/pooja'

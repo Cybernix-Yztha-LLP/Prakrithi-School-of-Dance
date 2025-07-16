@@ -23,7 +23,7 @@ const dances = [
   },
   {
     id: 'pooja',
-    name: 'Pooja Fest',
+    name: 'Prakrithi Fest',
     images:['P1.webp.png','P2.webp', 'P3.webp', 'P4.webp', 'P6.webp', 'P7.webp', 'P8.webp', 'P9.webp', 'P10.webp', 'P11.webp', 'P12.webp', 'P13.webp', 'P14.webp', 'P15.webp', 'P16.webp']
   },
   {
